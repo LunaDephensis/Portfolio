@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -20,14 +21,23 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.banner::after {
+.banner::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.35);
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(transparent, transparent, #fff);
 }
 .banner nav {
   position: fixed;
@@ -39,18 +49,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 6.25em;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 1px 0 30px rgba(0, 0, 0, 0.2);
+  background: transparent;
   z-index: 10000;
 }
 .banner nav .name {
   position: relative;
-  font-family: "Mr Dafoe", cursive;
-  color: #46a3b5;
-  font-size: 1.5em;
+  font-family: "Rock Salt", cursive;
+  color: #5edcf5;
+  font-size: 1em;
   cursor: pointer;
 }
 .banner nav .navbar {
@@ -74,7 +80,7 @@
 .banner nav .navbar li a {
   text-decoration: none;
   font-size: 1.1em;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
   height: 100%;
   padding: 0 1em;
@@ -101,6 +107,12 @@
   align-items: flex-start;
   flex-direction: column;
 }
+.banner .mainContent .textBox h2 {
+  font-size: 2.2em;
+  color: #5edcf5;
+  font-family: "Rock Salt", cursive;
+  font-weight: 500;
+}
 .banner .mainContent .profile {
   position: relative;
   justify-self: flex-end;
@@ -122,20 +134,21 @@
 }
 .banner .mainContent .profile .imgBox {
   position: relative;
-  width: 300px;
+  width: 240px;
   height: 300px;
   transform: translateX(90%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: -3px 3px 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
 }
 .banner .mainContent .profile .imgBox img {
   position: relative;
-  width: 100%;
   height: 100%;
+  width: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
