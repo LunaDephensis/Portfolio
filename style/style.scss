@@ -38,14 +38,19 @@
         left: 0;
         width: 100%;
         height: 3.5em;
-        background: transparent;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 6.25em;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 1px 0 30px rgba(0,0,0,0.2);
         z-index: 10000;
 
         .name {
+            position: relative;
             font-family: 'Mr Dafoe', cursive;
             color: #46a3b5;
             font-size: 1.5em;
@@ -109,34 +114,44 @@
         .profile {
             position: relative;
             justify-self: flex-end;
-            align-self: flex-end;
+            align-self: center;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
             max-width: 40%;
-            height: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, rgba(70, 163, 181, 0.3), rgba(70, 163, 181, 1) 80%);
+            z-index: 100;
+            /*height: calc(100% - 3.5em);
             background: rgba(255,255,255,0.5);
             backdrop-filter: blur(2px);
             -webkit-backdrop-filter: blur(2px);
             border-right: 2px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 1px 0 30px rgba(0,0,0,0.2);
+            box-shadow: 1px 0 30px rgba(0,0,0,0.2);*/
 
             .imgBox {
                 position: relative;
-                z-index: 100;
-                width: 280px;
-                height: 280px;
-                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+                transform: translateX(90%);
+                //border-radius: 50%;
+                border: 1px solid rgba(255,255,255,0.5);
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                //transform: rotate(45deg) translate(25%, -25%);
+                //box-shadow: -70px 100px 0 #46a3b5;
+                box-shadow: -3px 3px 20px rgba(255,255,255,0.3);
 
                 img {
                     position: relative;
                     width: 100%;
                     height: 100%;
+                   // width: 150%;
+                    //height: 150%;
+                   // transform: rotate(-45deg);
                 }
             }
         }
