@@ -22,6 +22,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 
     &::before {
         content: '';
@@ -30,10 +31,10 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.35);
+        background: rgba(255,255,255,0.5);
     }
 
-    &::after {
+    /*&::after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -41,6 +42,17 @@
         width: 100%;
         height: 200px;
         background: linear-gradient(transparent, transparent, $white);
+    }*/
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -10%;
+        right: -300px;
+        width: 700px;
+        height: 140%;
+        background: $medium;
+        transform: rotate(10deg);
     }
 
     nav {
@@ -65,7 +77,7 @@
             position: relative;
             //font-family: 'Mr Dafoe', cursive;
             font-family: 'Rock Salt', cursive;
-            color: $light;
+            color: $mediumDark;
             font-size: 1em;
             cursor: pointer;
         }
@@ -93,7 +105,7 @@
                     text-decoration: none;
                     font-size: 1.1em;
                     font-weight: 500;
-                    color: $white;
+                    color: $black;
                     height: 100%;
                     padding: 0 1em;
                     display: flex;
@@ -114,6 +126,7 @@
         flex-direction: row-reverse;
         padding: 0;
         padding-right: 6.25em;
+        z-index: 10;
 
         .textBox {
             position: relative;
@@ -125,9 +138,21 @@
 
             h2 {
                 font-size: 2.2em;
-                color: $light;
+                color: $black;
                 font-family: 'Rock Salt', cursive;
                 font-weight: 500;
+            }
+
+            h3 {
+                color: $black;
+                opacity: 0.8;
+                font-weight: 600;
+            }
+
+            p {
+                color: $black;
+                opacity: 0.8;
+                font-weight: 400;
             }
         }
 
@@ -141,7 +166,8 @@
             width: 100%;
             max-width: 40%;
             height: 400px;
-            background: linear-gradient(45deg, rgba(70, 163, 181, 0.3), rgba(70, 163, 181, 1) 80%);
+            background: linear-gradient(45deg, rgba(70, 163, 181, 0.4), rgba(70, 163, 181, 1) 80%);
+            //background: linear-gradient(45deg, rgba(70, 148, 135, 0.3), rgba(70, 148, 135, 1) 80%);
             z-index: 100;
             /*height: calc(100% - 3.5em);
             background: rgba(255,255,255,0.5);
