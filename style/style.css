@@ -276,8 +276,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(217deg, rgba(117, 200, 109, 0.8), rgba(117, 200, 109, 0) 70.71%), linear-gradient(127deg, rgba(70, 148, 135, 0.8), rgba(70, 148, 135, 0) 70.71%), linear-gradient(336deg, rgba(121, 205, 172, 0.8), rgba(121, 205, 172, 0) 70.71%);
-  padding: 6.25em;
+  /*background: linear-gradient(217deg, rgba(117, 200, 109,0.8), rgba(117, 200, 109,0) 70.71%),
+  linear-gradient(127deg, rgba(70, 148, 135,0.8), rgba(70, 148, 135,0) 70.71%),
+  linear-gradient(336deg, rgba(121, 205, 172,0.8), rgba(121, 205, 172,0) 70.71%);*/
+  background: linear-gradient(rgba(206, 229, 221, 0.1), rgba(206, 229, 221, 0.8), #cee5dd);
+  padding: 3em 6.25em;
   padding-bottom: 0;
 }
 .projects h2 {
@@ -313,8 +316,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
   padding: 2em;
+  border-bottom: 2px solid rgba(70, 148, 135, 0.3);
 }
 .projects .mainContent .projectCard .imgBox {
   position: relative;
@@ -337,10 +341,94 @@
 .projects .mainContent .projectCard .textBox {
   position: relative;
   max-width: 700px;
+  height: 100%;
+  padding: 1em 0;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+}
+.projects .mainContent .projectCard .textBox::before {
+  content: "Recipe Book";
+  position: absolute;
+  top: -25%;
+  left: -10%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5.5em;
+  line-height: 1.1em;
+  font-family: "Rock Salt", cursive;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+}
+.projects .mainContent .projectCard .textBox .title {
+  color: #181c20;
+  font-size: 2.5em;
+  font-family: "Rock Salt", cursive;
+  line-height: 1em;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  z-index: 10;
+}
+.projects .mainContent .projectCard .textBox .description {
+  color: #102e2f;
+  line-height: 1.5em;
+  margin-bottom: 0.5em;
+  z-index: 10;
+}
+.projects .mainContent .projectCard .textBox .techBar {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2em;
+}
+.projects .mainContent .projectCard .textBox .techBar span {
+  padding: 3px 6px;
+  background: linear-gradient(30deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  color: #2c6e7a;
+  font-size: 1em;
+  border-radius: 2px;
+  margin-right: 0.5em;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.projects .mainContent .projectCard .textBox .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.projects .mainContent .projectCard .textBox .links a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  background: #469487;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+.projects .mainContent .projectCard .textBox .links a ion-icon {
+  margin-left: 5px;
+  font-size: 1.1em;
+}
+.projects .mainContent .projectCard .textBox .links a:nth-child(1) {
+  margin-right: 1.2em;
+}
+.projects .mainContent .projectCard .textBox .links a:hover {
+  background: #75c86d;
+  color: #181c20;
 }
 .projects .mainContent .projectNavbar {
   position: relative;
@@ -357,6 +445,22 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  margin-bottom: 1em;
+  transition: 0.3s ease-out;
+}
+.projects .mainContent .projectNavbar li:hover, .projects .mainContent .projectNavbar li.active {
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.projects .mainContent .projectNavbar li:hover h4, .projects .mainContent .projectNavbar li.active h4 {
+  letter-spacing: 2px;
 }
 .projects .mainContent .projectNavbar li .imgBox {
   position: relative;
@@ -368,12 +472,21 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
 }
 .projects .mainContent .projectNavbar li .imgBox img {
   position: relative;
   height: 100%;
   width: 100%;
+}
+.projects .mainContent .projectNavbar li h4 {
+  color: #181c20;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 0.9em;
+  letter-spacing: 1px;
+  transition: 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
