@@ -537,7 +537,7 @@ body {
         left: 10px;
         width: 260px;
         height: 260px;
-        background: linear-gradient(rgba(117, 200, 109, 1), rgba(70, 148, 135, 0.3));
+        background: linear-gradient(rgba(117, 200, 109, 0.8), rgba(70, 148, 135, 0.3));
         border-radius: 8px;
         transform: rotate(45deg);
     }
@@ -545,11 +545,11 @@ body {
     &::after {
         content: '';
         position: absolute;
-        bottom: calc(30% - 90px);
+        bottom: calc(25% - 90px);
         right: 180px;
         width: 180px;
         height: 180px;
-        background: linear-gradient(45deg, rgba(117, 200, 109, 1), rgba(70, 148, 135, 0.3));
+        background: linear-gradient(-60deg, rgba(117, 200, 109, 0.6), rgba(70, 148, 135, 0.4), rgba(70, 148, 135, 0.1), transparent);
         border-radius: 6px;
         transform: rotate(45deg);
     }
@@ -646,10 +646,54 @@ body {
 
         .contactBox {
             position: relative;
+            height: 100%;
+            padding: 2em 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
+
+            h3 {
+                font-size: 2em;
+                font-family: 'Rock Salt', cursive;
+                font-weight: 500;
+                line-height: 1em;
+                letter-spacing: 3px;
+                margin-bottom: 2.5em;
+                color: $light;
+            }
+
+            span {
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 2em;
+                color: $ice;
+
+                ion-icon {
+                    font-size: 2.5em;
+                    color: $medium;
+                    margin-right: 1em;
+                }
+
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-weight: 600;
+                    color: $medium;
+
+                    &:hover {
+                        color: $yellowgreen;
+                    }
+                }
+            }
+
+            .githubLink {
+                a {
+                    margin: 0 0.5em;
+                }
+            }
         }
     }
 }
