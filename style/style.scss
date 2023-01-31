@@ -9,6 +9,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .banner {
     position: relative;
     width: 100%;
@@ -293,11 +297,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*background: linear-gradient(217deg, rgba(117, 200, 109,0.8), rgba(117, 200, 109,0) 70.71%),
-    linear-gradient(127deg, rgba(70, 148, 135,0.8), rgba(70, 148, 135,0) 70.71%),
-    linear-gradient(336deg, rgba(121, 205, 172,0.8), rgba(121, 205, 172,0) 70.71%);*/
     background: linear-gradient(rgba(206, 229, 221, 0.1), rgba(206, 229, 221, 0.8), $ice);
-    padding: 3em 6.25em;
+    padding: 1.5em 6.25em;
     padding-bottom: 0;
 
     h2 {
@@ -307,7 +308,6 @@
     .mainContent {
         position: relative;
         width: 100%;
-        //height: calc(100vh - 16.25em);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -320,7 +320,7 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2em;
-            padding: 2em;
+            padding-bottom: 2em;
             border-bottom: 2px solid rgba(70, 148, 135, 0.3);
 
             .imgBox {
@@ -347,7 +347,7 @@
                 position: relative;
                 max-width: 700px;
                 height: 100%;
-                padding: 1em 0;
+                padding-top: 0.8em;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
@@ -402,6 +402,8 @@
                         border-radius: 2px;
                         margin-right: 0.5em;
                         box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+                        border-top: 1px solid rgba(255,255,255,0.2);
+                        border-left: 1px solid rgba(255,255,255,0.2);
                     }
                 }
 
@@ -462,7 +464,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                padding: 1em 1.5em;
+                padding: 0.7em 1.5em;
                 border-radius: 4px;
                 cursor: pointer;
                 border: 1px solid transparent;
@@ -523,10 +525,131 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: $deepDark;
-    padding: 6.25em;
+    background: linear-gradient(217deg, rgba(22, 26, 28,1), rgba(22, 26, 28,0.8) 70.71%),
+                linear-gradient(127deg, rgba(16, 46, 47,1), rgba(16, 46, 47,0.8) 70.71%),
+                linear-gradient(336deg, rgba(16, 46, 47,1), rgba(16, 46, 47,0.6) 70.71%);
+    padding: 2em 6.25em;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: calc(40% - 130px);
+        left: 10px;
+        width: 260px;
+        height: 260px;
+        background: linear-gradient(rgba(117, 200, 109, 1), rgba(70, 148, 135, 0.3));
+        border-radius: 8px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: calc(30% - 90px);
+        right: 180px;
+        width: 180px;
+        height: 180px;
+        background: linear-gradient(45deg, rgba(117, 200, 109, 1), rgba(70, 148, 135, 0.3));
+        border-radius: 6px;
+        transform: rotate(45deg);
+    }
 
     h2 {
         @include pageTitle;
+    }
+
+    .mainContent {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+
+        .messengerBox {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 3.5em;
+            background: rgba(255,255,255,0.15);
+            border-radius: 4px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-left: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(12px);
+
+            input, textarea {
+                position: relative;
+                width: 100%;
+                outline: none;
+                border-radius: 2px;
+                padding: 5px 10px;
+                background: rgba(0,0,0,0.4);
+                margin-bottom: 1.5em;
+                border: none;
+                border-top: 1px solid rgba(255,255,255,0.2);
+                border-left: 1px solid rgba(255,255,255,0.2);
+                color: $white;
+                font-weight: 500;
+                font-size: 1.1em;
+
+                &::placeholder {
+                    color: $ice;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                }
+            }
+
+            textarea {
+                resize: none;
+                height: 200px;
+            }
+
+            .submit {
+                position: relative;
+                width: 100%;
+                border: none;
+                padding: 8px 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+                background: $medium;
+                color: $white;
+                font-size: 1.1em;
+                font-weight: 500;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+
+                ion-icon {
+                    position: absolute;
+                    right: 2em;
+                    font-size: 1.1em;
+                    color: $white;
+                    transition: 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    background: $yellowgreen;
+                    color: $black;
+
+                    ion-icon {
+                        right: 1.8em;
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .contactBox {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 }
