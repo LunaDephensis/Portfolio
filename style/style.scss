@@ -41,12 +41,12 @@ body {
         content: '';
         position: absolute;
         top: -10%;
-        right: -300px;
-        width: 700px;
+        right: -18.75em;
+        width: 43.75em;
         height: 140%;
         background: $medium;
         transform: rotate(10deg);
-        box-shadow: 5px 0 15px rgba(0,0,0,0.8);
+        box-shadow: 0.3em 0 0.9em rgba(0,0,0,0.8);
     }
 
     nav {
@@ -61,6 +61,10 @@ body {
         padding: 0 6.25em;
         background: transparent;
         z-index: 10000;
+
+        @include desctopMini {
+            padding: 0 5.6em;
+        }
 
         .name {
             position: relative;
@@ -137,6 +141,10 @@ body {
         padding-right: 6.25em;
         z-index: 10;
 
+        @include desctopMini {
+            padding-right: 5.6em;
+        }
+
         .textBox {
             position: relative;
             max-width: 40%;
@@ -174,22 +182,26 @@ body {
             align-items: center;
             width: 100%;
             max-width: 40%;
-            height: 400px;
+            height: 25em;
             background: linear-gradient(45deg, rgba(117, 200, 109, 0.4), rgba(70, 148, 135, 1) 80%);
             z-index: 100;
 
             .imgBox {
                 position: relative;
-                width: 240px;
-                height: 300px;
+                width: 15em;
+                height: 18.75em;
                 transform: translateX(90%);
                 border: 1px solid rgba(255,255,255,0.1);
-                border-radius: 3px;
+                border-radius: 0.2em;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 box-shadow: 3px 3px 20px rgba(0,0,0,0.3);
+
+                @include desctopMini {
+                    transform: translateX(80%);
+                }
 
                 img {
                     position: relative;
@@ -212,6 +224,10 @@ body {
     background: $deepDark;
     padding: 6.25em;
 
+    @include desctopMini {
+        padding: 5.6em;
+    }
+
     h2 {
         @include pageTitle;
     }
@@ -225,21 +241,25 @@ body {
         grid-gap: 2.8em;
         z-index: 10;
 
+        @include desctopMini {
+            grid-template-columns: repeat(auto-fill, 10em);
+        }
+
         .skillCard {
             position: relative;
-            width: 150px;
-            height: 200px;
+            width: 9.4em;
+            height: 12.5em;
             color: $white;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            border-radius: 2px;
+            border-radius: 0.1em;
 
             .tech {
                 position: relative;
                 margin-bottom: 1.5em;
-                border-radius: 2px;
+                border-radius: 0.1em;
                 background: linear-gradient(10deg, $medium, $light, $light);
                 width: 4.5em;
                 height: 4.5em;
@@ -252,7 +272,7 @@ body {
                     height: 100%;
                     top: -50%;
                     left: -35%;
-                    border-radius: 2px;
+                    border-radius: 0.1em;
                     background: rgba(0,0,0,0.1);
                     z-index: -1;
                 }
@@ -270,7 +290,7 @@ body {
                 opacity: 0.8;
                 font-size: 0.9em;
                 font-family: 'Rock Salt', cursive;
-                letter-spacing: 2px;
+                letter-spacing: 0.1em;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -301,6 +321,11 @@ body {
     padding: 1.5em 6.25em;
     padding-bottom: 0;
 
+    @include desctopMini {
+        padding: 1em 5.6em;
+        padding-bottom: 0;
+    }
+
     h2 {
         @include pageTitle;
     }
@@ -325,15 +350,15 @@ body {
 
             .imgBox {
                 position: relative;
-                width: 240px;
-                height: 300px;
-                border: 1px solid rgba(255,255,255,0.1);
-                border-radius: 3px;
+                width: 22.88em;
+                height: 14em;
+                //border: 1px solid rgba(255,255,255,0.1);
+                border-radius: 0.2em;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                box-shadow: 3px 3px 20px rgba(0,0,0,0.3);
+                //box-shadow: 3px 3px 20px rgba(0,0,0,0.3);
                 margin-right: 2em;
 
                 img {
@@ -345,13 +370,18 @@ body {
 
             .textBox {
                 position: relative;
-                max-width: 700px;
+                max-width: 43.75em;
                 height: 100%;
                 padding-top: 0.8em;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
                 flex-direction: column;
+
+                @include desctopMini {
+                    max-width: 25em;
+                    padding-top: 0;
+                }
 
                 &::before {
                     content: 'Recipe Book';
@@ -369,6 +399,12 @@ body {
                     color: rgba(255,255,255,0.5);
                     text-shadow: 1px 1px 10px rgba(0,0,0,0.08);
                     z-index: 1;
+
+                    @include desctopMini {
+                        font-size: 3.5em;
+                        top: -30%;
+                        left: -7%;
+                    }
                 }
 
                 .title {
@@ -376,10 +412,14 @@ body {
                     font-size: 2.5em;
                     font-family: 'Rock Salt', cursive;
                     line-height: 1em;
-                    letter-spacing: 2px;
+                    letter-spacing: 0.1em;
                     font-weight: 500;
                     margin-bottom: 0.5em;
                     z-index: 10;
+
+                    @include desctopMini {
+                        font-size: 2.2em;
+                    }
                 }
 
                 .description {
@@ -387,6 +427,10 @@ body {
                     line-height: 1.5em;
                     margin-bottom: 0.5em;
                     z-index: 10;
+
+                    @include desctopMini {
+                        line-height: 1.3em;
+                    }
                 }
 
                 .techBar {
@@ -394,12 +438,16 @@ body {
                     width: 100%;
                     margin-bottom: 2em;
 
+                    @include desctopMini {
+                        margin-bottom: 1.5em;
+                    }
+
                     span {
-                        padding: 3px 6px;
+                        padding: 0.2em 0.4em;
                         background: linear-gradient(30deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
                         color: $mediumDark;
                         font-size: 1em;
-                        border-radius: 2px;
+                        border-radius: 0.1em;
                         margin-right: 0.5em;
                         box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
                         border-top: 1px solid rgba(255,255,255,0.2);
@@ -419,20 +467,24 @@ body {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 200px;
+                        width: 12.5em;
                         text-decoration: none;
-                        padding: 8px 15px;
-                        border-radius: 3px;
+                        padding: 0.5em 0.9em;
+                        border-radius: 0.2em;
                         background: $medium;
                         color: $white;
                         font-size: 1.2em;
                         font-weight: 500;
-                        letter-spacing: 2px;
+                        letter-spacing: 0.1em;
                         box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
                         transition: 0.3s ease-in-out;
 
+                        @include desctopMini {
+                            width: 9.4em;
+                        }
+
                         ion-icon {
-                            margin-left: 5px;
+                            margin-left: 0.3em;
                             font-size: 1.1em;
                         }
                         
@@ -465,7 +517,7 @@ body {
                 align-items: center;
                 flex-direction: column;
                 padding: 0.7em 1.5em;
-                border-radius: 4px;
+                border-radius: 0.25em;
                 cursor: pointer;
                 border: 1px solid transparent;
                 margin-bottom: 1em;
@@ -480,21 +532,21 @@ body {
                     backdrop-filter: blur(5px);
 
                     h4 {
-                        letter-spacing: 2px;
+                        letter-spacing: 0.1em;
                     }
                 }
 
                 .imgBox {
                     position: relative;
-                    width: 160px;
-                    height: 120px;
+                    width: 10em;
+                    height: 7.5em;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 1px solid rgba(255,255,255,0.1);
-                    border-radius: 3px;
+                    //border: 1px solid rgba(255,255,255,0.1);
+                    border-radius: 0.2em;
                     overflow: hidden;
-                    box-shadow: 3px 3px 20px rgba(0,0,0,0.1);
+                    //box-shadow: 3px 3px 20px rgba(0,0,0,0.1);
                     margin-bottom: 1em;
 
                     img {
@@ -509,7 +561,7 @@ body {
                     font-size: 0.9em;
                     font-weight: 400;
                     line-height: 0.9em;
-                    letter-spacing: 1px;
+                    letter-spacing: 0.06em;
                     transition: 0.3s ease-in-out;
                 }
             }
@@ -534,23 +586,23 @@ body {
         content: '';
         position: absolute;
         top: calc(40% - 130px);
-        left: 10px;
-        width: 260px;
-        height: 260px;
+        left: 0.6em;
+        width: 16.25em;
+        height: 16.25em;
         background: linear-gradient(rgba(117, 200, 109, 0.8), rgba(70, 148, 135, 0.3));
-        border-radius: 8px;
+        border-radius: 0.5em;
         transform: rotate(45deg);
     }
 
     &::after {
         content: '';
         position: absolute;
-        bottom: calc(25% - 90px);
-        right: 180px;
-        width: 180px;
-        height: 180px;
+        bottom: calc(25% - 5.62em);
+        right: 11.25em;
+        width: 11.25em;
+        height: 11.25em;
         background: linear-gradient(-60deg, rgba(117, 200, 109, 0.6), rgba(70, 148, 135, 0.4), rgba(70, 148, 135, 0.1), transparent);
-        border-radius: 6px;
+        border-radius: 0.4em;
         transform: rotate(45deg);
     }
 
@@ -574,7 +626,7 @@ body {
             flex-direction: column;
             padding: 3.5em;
             background: rgba(255,255,255,0.15);
-            border-radius: 4px;
+            border-radius: 0.25em;
             box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
             border-top: 1px solid rgba(255,255,255,0.1);
             border-left: 1px solid rgba(255,255,255,0.1);
@@ -584,8 +636,8 @@ body {
                 position: relative;
                 width: 100%;
                 outline: none;
-                border-radius: 2px;
-                padding: 5px 10px;
+                border-radius: 0.2em;
+                padding: 0.3em 0.6em;
                 background: rgba(0,0,0,0.4);
                 margin-bottom: 1.5em;
                 border: none;
@@ -598,29 +650,29 @@ body {
                 &::placeholder {
                     color: $ice;
                     font-weight: 400;
-                    letter-spacing: 1px;
+                    letter-spacing: 0.06em;
                 }
             }
 
             textarea {
                 resize: none;
-                height: 200px;
+                height: 12.5em;
             }
 
             .submit {
                 position: relative;
                 width: 100%;
                 border: none;
-                padding: 8px 15px;
+                padding: 0.5em 0.9em;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border-radius: 2px;
+                border-radius: 0.1em;
                 background: $medium;
                 color: $white;
                 font-size: 1.1em;
                 font-weight: 500;
-                letter-spacing: 1px;
+                letter-spacing: 0.06em;
                 cursor: pointer;
                 transition: 0.3s ease-in-out;
 
@@ -658,7 +710,7 @@ body {
                 font-family: 'Rock Salt', cursive;
                 font-weight: 500;
                 line-height: 1em;
-                letter-spacing: 3px;
+                letter-spacing: 0.2em;
                 margin-bottom: 2.5em;
                 color: $light;
             }
@@ -707,7 +759,7 @@ body {
         justify-content: space-between;
         align-items: center;
         font-size: 0.8em;
-        letter-spacing: 1px;
+        letter-spacing: 0.06em;
         color: rgba(255,255,255,0.5);
         
         span {
@@ -742,6 +794,7 @@ body {
                 font-size: 4.5em;
                 color: $medium;
                 transition: 0.3s ease-in-out;
+                z-index: 10;
 
                 &:hover {
                     color: $yellowgreen;
@@ -750,6 +803,7 @@ body {
 
                 ion-icon {
                     margin-left: 0;
+                    z-index: 1;
                 }
             }
         }

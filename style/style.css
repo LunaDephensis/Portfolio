@@ -38,12 +38,12 @@ body {
   content: "";
   position: absolute;
   top: -10%;
-  right: -300px;
-  width: 700px;
+  right: -18.75em;
+  width: 43.75em;
   height: 140%;
   background: #469487;
   transform: rotate(10deg);
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0.3em 0 0.9em rgba(0, 0, 0, 0.8);
 }
 .banner nav {
   position: fixed;
@@ -57,6 +57,11 @@ body {
   padding: 0 6.25em;
   background: transparent;
   z-index: 10000;
+}
+@media (max-width: 1115px) {
+  .banner nav {
+    padding: 0 5.6em;
+  }
 }
 .banner nav .name {
   position: relative;
@@ -121,6 +126,11 @@ body {
   padding-right: 6.25em;
   z-index: 10;
 }
+@media (max-width: 1115px) {
+  .banner .mainContent {
+    padding-right: 5.6em;
+  }
+}
 .banner .mainContent .textBox {
   position: relative;
   max-width: 40%;
@@ -154,22 +164,27 @@ body {
   align-items: center;
   width: 100%;
   max-width: 40%;
-  height: 400px;
+  height: 25em;
   background: linear-gradient(45deg, rgba(117, 200, 109, 0.4), #469487 80%);
   z-index: 100;
 }
 .banner .mainContent .profile .imgBox {
   position: relative;
-  width: 240px;
-  height: 300px;
+  width: 15em;
+  height: 18.75em;
   transform: translateX(90%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  border-radius: 0.2em;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 1115px) {
+  .banner .mainContent .profile .imgBox {
+    transform: translateX(80%);
+  }
 }
 .banner .mainContent .profile .imgBox img {
   position: relative;
@@ -187,6 +202,11 @@ body {
   flex-direction: column;
   background: #161a1c;
   padding: 6.25em;
+}
+@media (max-width: 1115px) {
+  .skills {
+    padding: 5.6em;
+  }
 }
 .skills h2 {
   position: absolute;
@@ -216,21 +236,26 @@ body {
   grid-gap: 2.8em;
   z-index: 10;
 }
+@media (max-width: 1115px) {
+  .skills .mainContent {
+    grid-template-columns: repeat(auto-fill, 10em);
+  }
+}
 .skills .mainContent .skillCard {
   position: relative;
-  width: 150px;
-  height: 200px;
+  width: 9.4em;
+  height: 12.5em;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 2px;
+  border-radius: 0.1em;
 }
 .skills .mainContent .skillCard .tech {
   position: relative;
   margin-bottom: 1.5em;
-  border-radius: 2px;
+  border-radius: 0.1em;
   background: linear-gradient(10deg, #469487, #79cdac, #79cdac);
   width: 4.5em;
   height: 4.5em;
@@ -243,7 +268,7 @@ body {
   height: 100%;
   top: -50%;
   left: -35%;
-  border-radius: 2px;
+  border-radius: 0.1em;
   background: rgba(0, 0, 0, 0.1);
   z-index: -1;
 }
@@ -258,7 +283,7 @@ body {
   opacity: 0.8;
   font-size: 0.9em;
   font-family: "Rock Salt", cursive;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,6 +308,12 @@ body {
   background: linear-gradient(rgba(206, 229, 221, 0.1), rgba(206, 229, 221, 0.8), #cee5dd);
   padding: 1.5em 6.25em;
   padding-bottom: 0;
+}
+@media (max-width: 1115px) {
+  .projects {
+    padding: 1em 5.6em;
+    padding-bottom: 0;
+  }
 }
 .projects h2 {
   position: absolute;
@@ -323,15 +354,13 @@ body {
 }
 .projects .mainContent .projectCard .imgBox {
   position: relative;
-  width: 240px;
-  height: 300px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  width: 22.88em;
+  height: 14em;
+  border-radius: 0.2em;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
   margin-right: 2em;
 }
 .projects .mainContent .projectCard .imgBox img {
@@ -341,13 +370,19 @@ body {
 }
 .projects .mainContent .projectCard .textBox {
   position: relative;
-  max-width: 700px;
+  max-width: 43.75em;
   height: 100%;
   padding-top: 0.8em;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+}
+@media (max-width: 1115px) {
+  .projects .mainContent .projectCard .textBox {
+    max-width: 25em;
+    padding-top: 0;
+  }
 }
 .projects .mainContent .projectCard .textBox::before {
   content: "Recipe Book";
@@ -366,15 +401,27 @@ body {
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
   z-index: 1;
 }
+@media (max-width: 1115px) {
+  .projects .mainContent .projectCard .textBox::before {
+    font-size: 3.5em;
+    top: -30%;
+    left: -7%;
+  }
+}
 .projects .mainContent .projectCard .textBox .title {
   color: #181c20;
   font-size: 2.5em;
   font-family: "Rock Salt", cursive;
   line-height: 1em;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   font-weight: 500;
   margin-bottom: 0.5em;
   z-index: 10;
+}
+@media (max-width: 1115px) {
+  .projects .mainContent .projectCard .textBox .title {
+    font-size: 2.2em;
+  }
 }
 .projects .mainContent .projectCard .textBox .description {
   color: #102e2f;
@@ -382,17 +429,27 @@ body {
   margin-bottom: 0.5em;
   z-index: 10;
 }
+@media (max-width: 1115px) {
+  .projects .mainContent .projectCard .textBox .description {
+    line-height: 1.3em;
+  }
+}
 .projects .mainContent .projectCard .textBox .techBar {
   position: relative;
   width: 100%;
   margin-bottom: 2em;
 }
+@media (max-width: 1115px) {
+  .projects .mainContent .projectCard .textBox .techBar {
+    margin-bottom: 1.5em;
+  }
+}
 .projects .mainContent .projectCard .textBox .techBar span {
-  padding: 3px 6px;
+  padding: 0.2em 0.4em;
   background: linear-gradient(30deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
   color: #2c6e7a;
   font-size: 1em;
-  border-radius: 2px;
+  border-radius: 0.1em;
   margin-right: 0.5em;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -410,20 +467,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 12.5em;
   text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 3px;
+  padding: 0.5em 0.9em;
+  border-radius: 0.2em;
   background: #469487;
   color: #fff;
   font-size: 1.2em;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 1115px) {
+  .projects .mainContent .projectCard .textBox .links a {
+    width: 9.4em;
+  }
+}
 .projects .mainContent .projectCard .textBox .links a ion-icon {
-  margin-left: 5px;
+  margin-left: 0.3em;
   font-size: 1.1em;
 }
 .projects .mainContent .projectCard .textBox .links a:nth-child(1) {
@@ -449,7 +511,7 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 0.7em 1.5em;
-  border-radius: 4px;
+  border-radius: 0.25em;
   cursor: pointer;
   border: 1px solid transparent;
   margin-bottom: 1em;
@@ -463,19 +525,17 @@ body {
   backdrop-filter: blur(5px);
 }
 .projects .mainContent .projectNavbar li:hover h4, .projects .mainContent .projectNavbar li.active h4 {
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
 }
 .projects .mainContent .projectNavbar li .imgBox {
   position: relative;
-  width: 160px;
-  height: 120px;
+  width: 10em;
+  height: 7.5em;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  border-radius: 0.2em;
   overflow: hidden;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 1em;
 }
 .projects .mainContent .projectNavbar li .imgBox img {
@@ -488,7 +548,7 @@ body {
   font-size: 0.9em;
   font-weight: 400;
   line-height: 0.9em;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
   transition: 0.3s ease-in-out;
 }
 
@@ -507,22 +567,22 @@ body {
   content: "";
   position: absolute;
   top: calc(40% - 130px);
-  left: 10px;
-  width: 260px;
-  height: 260px;
+  left: 0.6em;
+  width: 16.25em;
+  height: 16.25em;
   background: linear-gradient(rgba(117, 200, 109, 0.8), rgba(70, 148, 135, 0.3));
-  border-radius: 8px;
+  border-radius: 0.5em;
   transform: rotate(45deg);
 }
 .contact::after {
   content: "";
   position: absolute;
-  bottom: calc(25% - 90px);
-  right: 180px;
-  width: 180px;
-  height: 180px;
+  bottom: calc(25% - 5.62em);
+  right: 11.25em;
+  width: 11.25em;
+  height: 11.25em;
   background: linear-gradient(-60deg, rgba(117, 200, 109, 0.6), rgba(70, 148, 135, 0.4), rgba(70, 148, 135, 0.1), transparent);
-  border-radius: 6px;
+  border-radius: 0.4em;
   transform: rotate(45deg);
 }
 .contact h2 {
@@ -560,7 +620,7 @@ body {
   flex-direction: column;
   padding: 3.5em;
   background: rgba(255, 255, 255, 0.15);
-  border-radius: 4px;
+  border-radius: 0.25em;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -570,8 +630,8 @@ body {
   position: relative;
   width: 100%;
   outline: none;
-  border-radius: 2px;
-  padding: 5px 10px;
+  border-radius: 0.2em;
+  padding: 0.3em 0.6em;
   background: rgba(0, 0, 0, 0.4);
   margin-bottom: 1.5em;
   border: none;
@@ -584,26 +644,26 @@ body {
 .contact .mainContent .messengerBox input::placeholder, .contact .mainContent .messengerBox textarea::placeholder {
   color: #cee5dd;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
 }
 .contact .mainContent .messengerBox textarea {
   resize: none;
-  height: 200px;
+  height: 12.5em;
 }
 .contact .mainContent .messengerBox .submit {
   position: relative;
   width: 100%;
   border: none;
-  padding: 8px 15px;
+  padding: 0.5em 0.9em;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2px;
+  border-radius: 0.1em;
   background: #469487;
   color: #fff;
   font-size: 1.1em;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -636,7 +696,7 @@ body {
   font-family: "Rock Salt", cursive;
   font-weight: 500;
   line-height: 1em;
-  letter-spacing: 3px;
+  letter-spacing: 0.2em;
   margin-bottom: 2.5em;
   color: #79cdac;
 }
@@ -675,7 +735,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 0.8em;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.5);
 }
 .contact footer span {
@@ -705,6 +765,7 @@ body {
   font-size: 4.5em;
   color: #469487;
   transition: 0.3s ease-in-out;
+  z-index: 10;
 }
 .contact footer .up a:hover {
   color: #75c86d;
@@ -712,6 +773,7 @@ body {
 }
 .contact footer .up a ion-icon {
   margin-left: 0;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
