@@ -8,7 +8,13 @@
 }
 
 body {
+  font-size: 16px;
   overflow-x: hidden;
+}
+@media (max-width: 991px) {
+  body {
+    font-size: 15px;
+  }
 }
 
 .banner {
@@ -45,6 +51,11 @@ body {
   transform: rotate(10deg);
   box-shadow: 0.3em 0 0.9em rgba(0, 0, 0, 0.8);
 }
+@media (max-width: 991px) {
+  .banner::after {
+    right: -27.5em;
+  }
+}
 .banner nav {
   position: fixed;
   top: 0;
@@ -61,6 +72,11 @@ body {
 @media (max-width: 1115px) {
   .banner nav {
     padding: 0 5.6em;
+  }
+}
+@media (max-width: 991px) {
+  .banner nav {
+    padding: 0 4em;
   }
 }
 .banner nav .name {
@@ -131,6 +147,11 @@ body {
     padding-right: 5.6em;
   }
 }
+@media (max-width: 991px) {
+  .banner .mainContent {
+    padding-right: 4em;
+  }
+}
 .banner .mainContent .textBox {
   position: relative;
   max-width: 40%;
@@ -145,10 +166,20 @@ body {
   font-family: "Rock Salt", cursive;
   font-weight: 500;
 }
+@media (max-width: 991px) {
+  .banner .mainContent .textBox h2 {
+    font-size: 1.8em;
+  }
+}
 .banner .mainContent .textBox h3 {
   color: #181c20;
   opacity: 0.8;
   font-weight: 600;
+}
+@media (max-width: 991px) {
+  .banner .mainContent .textBox h3 {
+    margin-bottom: 0.6em;
+  }
 }
 .banner .mainContent .textBox p {
   color: #102e2f;
@@ -186,6 +217,11 @@ body {
     transform: translateX(80%);
   }
 }
+@media (max-width: 991px) {
+  .banner .mainContent .profile .imgBox {
+    transform: translateX(65%);
+  }
+}
 .banner .mainContent .profile .imgBox img {
   position: relative;
   height: 100%;
@@ -208,11 +244,16 @@ body {
     padding: 5.6em;
   }
 }
+@media (max-width: 991px) {
+  .skills {
+    padding: 4em;
+  }
+}
 .skills h2 {
   position: absolute;
   top: -30px;
   width: 100%;
-  max-width: 700px;
+  max-width: 43.75rem;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -225,7 +266,13 @@ body {
   box-shadow: 0 -0.3em 1.5em 0.2em rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  z-index: 10;
+  z-index: 100;
+}
+@media (max-width: 991px) {
+  .skills h2 {
+    font-size: 1.3em;
+    max-width: 36rem;
+  }
 }
 .skills .mainContent {
   position: relative;
@@ -241,6 +288,12 @@ body {
     grid-template-columns: repeat(auto-fill, 10em);
   }
 }
+@media (max-width: 991px) {
+  .skills .mainContent {
+    grid-template-columns: repeat(auto-fill, 9.7em);
+    grid-gap: 1.6em;
+  }
+}
 .skills .mainContent .skillCard {
   position: relative;
   width: 9.4em;
@@ -251,6 +304,12 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 0.1em;
+}
+@media (max-width: 991px) {
+  .skills .mainContent .skillCard {
+    width: 8em;
+    height: 10.7em;
+  }
 }
 .skills .mainContent .skillCard .tech {
   position: relative;
@@ -277,6 +336,11 @@ body {
   top: -0.35em;
   left: -0.2em;
   font-size: 3em;
+}
+@media (max-width: 991px) {
+  .skills .mainContent .skillCard .tech ion-icon {
+    font-size: 2.8em;
+  }
 }
 .skills .mainContent .skillCard h4 {
   font-weight: 500;
@@ -315,11 +379,17 @@ body {
     padding-bottom: 0;
   }
 }
+@media (max-width: 991px) {
+  .projects {
+    padding: 0.8em 4em;
+    padding-bottom: 0;
+  }
+}
 .projects h2 {
   position: absolute;
   top: -30px;
   width: 100%;
-  max-width: 700px;
+  max-width: 43.75rem;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -332,7 +402,13 @@ body {
   box-shadow: 0 -0.3em 1.5em 0.2em rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  z-index: 10;
+  z-index: 100;
+}
+@media (max-width: 991px) {
+  .projects h2 {
+    font-size: 1.3em;
+    max-width: 36rem;
+  }
 }
 .projects .mainContent {
   position: relative;
@@ -352,6 +428,12 @@ body {
   padding-bottom: 2em;
   border-bottom: 2px solid rgba(70, 148, 135, 0.3);
 }
+@media (max-width: 991px) {
+  .projects .mainContent .projectCard {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
 .projects .mainContent .projectCard .imgBox {
   position: relative;
   width: 22.88em;
@@ -362,6 +444,13 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 2em;
+}
+@media (max-width: 991px) {
+  .projects .mainContent .projectCard .imgBox {
+    width: 20em;
+    height: 12.25em;
+    margin-right: 1.2em;
+  }
 }
 .projects .mainContent .projectCard .imgBox img {
   position: relative;
@@ -403,9 +492,7 @@ body {
 }
 @media (max-width: 1115px) {
   .projects .mainContent .projectCard .textBox::before {
-    font-size: 3.5em;
-    top: -30%;
-    left: -7%;
+    display: none;
   }
 }
 .projects .mainContent .projectCard .textBox .title {
@@ -423,6 +510,11 @@ body {
     font-size: 2.2em;
   }
 }
+@media (max-width: 991px) {
+  .projects .mainContent .projectCard .textBox .title {
+    font-size: 2em;
+  }
+}
 .projects .mainContent .projectCard .textBox .description {
   color: #102e2f;
   line-height: 1.5em;
@@ -432,6 +524,11 @@ body {
 @media (max-width: 1115px) {
   .projects .mainContent .projectCard .textBox .description {
     line-height: 1.3em;
+  }
+}
+@media (max-width: 991px) {
+  .projects .mainContent .projectCard .textBox .description {
+    margin-bottom: 0.7em;
   }
 }
 .projects .mainContent .projectCard .textBox .techBar {
@@ -455,6 +552,11 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 1115px) {
+  .projects .mainContent .projectCard .textBox .techBar span {
+    font-size: 0.9em;
+  }
+}
 .projects .mainContent .projectCard .textBox .links {
   position: relative;
   width: 100%;
@@ -469,7 +571,7 @@ body {
   align-items: center;
   width: 12.5em;
   text-decoration: none;
-  padding: 0.5em 0.9em;
+  padding: 0.5em 0;
   border-radius: 0.2em;
   background: #469487;
   color: #fff;
@@ -538,6 +640,12 @@ body {
   overflow: hidden;
   margin-bottom: 1em;
 }
+@media (max-width: 1115px) {
+  .projects .mainContent .projectNavbar li .imgBox {
+    width: 8.9em;
+    height: 6.6em;
+  }
+}
 .projects .mainContent .projectNavbar li .imgBox img {
   position: relative;
   height: 100%;
@@ -563,6 +671,19 @@ body {
   background: linear-gradient(217deg, #161a1c, rgba(22, 26, 28, 0.8) 70.71%), linear-gradient(127deg, #102e2f, rgba(16, 46, 47, 0.8) 70.71%), linear-gradient(336deg, #102e2f, rgba(16, 46, 47, 0.6) 70.71%);
   padding: 2em 6.25em;
 }
+@media (max-width: 1115px) {
+  .contact {
+    font-size: 15px;
+    padding: 1.5em 5.6em;
+  }
+}
+@media (max-width: 991px) {
+  .contact {
+    height: 100%;
+    min-height: 100vh;
+    padding: 1.5em 4em;
+  }
+}
 .contact::before {
   content: "";
   position: absolute;
@@ -573,6 +694,11 @@ body {
   background: linear-gradient(rgba(117, 200, 109, 0.8), rgba(70, 148, 135, 0.3));
   border-radius: 0.5em;
   transform: rotate(45deg);
+}
+@media (max-width: 991px) {
+  .contact::before {
+    background: linear-gradient(to top, rgba(117, 200, 109, 0.6), rgba(70, 148, 135, 0.2), rgba(70, 148, 135, 0.01));
+  }
 }
 .contact::after {
   content: "";
@@ -589,7 +715,7 @@ body {
   position: absolute;
   top: -30px;
   width: 100%;
-  max-width: 700px;
+  max-width: 43.75rem;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -602,7 +728,13 @@ body {
   box-shadow: 0 -0.3em 1.5em 0.2em rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  z-index: 10;
+  z-index: 100;
+}
+@media (max-width: 991px) {
+  .contact h2 {
+    font-size: 1.3em;
+    max-width: 36rem;
+  }
 }
 .contact .mainContent {
   position: relative;
@@ -612,8 +744,15 @@ body {
   align-items: center;
   z-index: 10;
 }
+@media (max-width: 991px) {
+  .contact .mainContent {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
 .contact .mainContent .messengerBox {
   position: relative;
+  max-height: calc(100vh - 5em);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -625,6 +764,20 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
+  margin-right: 1.5em;
+}
+@media (max-width: 1115px) {
+  .contact .mainContent .messengerBox {
+    padding: 2.5em;
+  }
+}
+@media (max-width: 991px) {
+  .contact .mainContent .messengerBox {
+    height: auto;
+    width: 100%;
+    max-width: 30em;
+    margin-bottom: 2em;
+  }
 }
 .contact .mainContent .messengerBox input, .contact .mainContent .messengerBox textarea {
   position: relative;
@@ -633,7 +786,7 @@ body {
   border-radius: 0.2em;
   padding: 0.3em 0.6em;
   background: rgba(0, 0, 0, 0.4);
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -700,6 +853,19 @@ body {
   margin-bottom: 2.5em;
   color: #79cdac;
 }
+@media (max-width: 1115px) {
+  .contact .mainContent .contactBox h3 {
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+  }
+}
+@media (max-width: 991px) {
+  .contact .mainContent .contactBox h3 {
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+}
 .contact .mainContent .contactBox span {
   position: relative;
   display: flex;
@@ -713,11 +879,22 @@ body {
   color: #469487;
   margin-right: 1em;
 }
+@media (max-width: 1115px) {
+  .contact .mainContent .contactBox span ion-icon {
+    font-size: 1.8em;
+    margin-right: 0.6em;
+  }
+}
 .contact .mainContent .contactBox span a {
   text-decoration: none;
   cursor: pointer;
   font-weight: 600;
   color: #469487;
+}
+@media (max-width: 991px) {
+  .contact .mainContent .contactBox span a {
+    color: #75c86d;
+  }
 }
 .contact .mainContent .contactBox span a:hover {
   color: #75c86d;
@@ -737,6 +914,11 @@ body {
   font-size: 0.8em;
   letter-spacing: 0.06em;
   color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 991px) {
+  .contact footer {
+    padding: 1em 4em;
+  }
 }
 .contact footer span {
   position: relative;
