@@ -16,6 +16,10 @@ body {
     @include tablet {
         font-size: 15px;
     }
+
+    @include tabletS {
+        font-size: 14px;
+    }
 }
 
 .banner {
@@ -31,6 +35,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+
+    @include tabletS {
+        height: 100%;
+        min-height: 100vh;
+        padding: 2.5em 0;
+    }
 
     &::before {
         content: '';
@@ -56,6 +66,10 @@ body {
         @include tablet {
             right: -27.5em;
         }
+
+        @include mobile {
+            right: -28.5em;
+        }
     }
 
     nav {
@@ -79,12 +93,24 @@ body {
             padding: 0 4em;
         }
 
+        @include tabletS {
+            padding: 0 3.5em;
+        }
+
+        @include mobile {
+            padding: 0 1.8em;
+        }
+
         .name {
             position: relative;
             font-family: 'Rock Salt', cursive;
             color: $mediumDark;
             font-size: 1em;
             cursor: pointer;
+
+            @include mobile {
+                font-size: 0.9em;
+            }
         }
 
         .navbar {
@@ -162,6 +188,18 @@ body {
             padding-right: 4em;
         }
 
+        @include tabletS {
+            padding-right: 3.5em;
+            padding-left: 3.5em;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+
+        @include mobile {
+            padding-right: 1.8em;
+            padding-left: 1.8em;
+        }
+
         .textBox {
             position: relative;
             max-width: 40%;
@@ -169,6 +207,13 @@ body {
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
+
+            @include tabletS {
+                width: 100%;
+                max-width: 100%;
+                align-items: center;
+                text-align: center;
+            }
 
 
             h2 {
@@ -212,6 +257,15 @@ body {
             background: linear-gradient(45deg, rgba(117, 200, 109, 0.4), rgba(70, 148, 135, 1) 80%);
             z-index: 100;
 
+            @include tabletS {
+                margin-bottom: 2em;
+                align-self: flex-start;
+                max-width: 100%;
+                height: 21.4em;
+                background: transparent;
+                z-index: 10;
+            }
+
             .imgBox {
                 position: relative;
                 width: 15em;
@@ -231,6 +285,12 @@ body {
 
                 @include tablet {
                     transform: translateX(65%);
+                }
+
+                @include tabletS {
+                    transform: none;
+                    width: 17.1em;
+                    height: 21.4em;
                 }
 
                 img {
@@ -262,6 +322,18 @@ body {
         padding: 4em;
     }
 
+    @include tabletS {
+        padding: 3.5em;
+        padding-top: 4em;
+        height: 100%;
+        min-height: 100vh;
+    }
+
+    @include mobile {
+        padding: 1.8em;
+        padding-top: 4em;
+    }
+
     h2 {
         @include pageTitle;
     }
@@ -282,6 +354,10 @@ body {
         @include tablet {
             grid-template-columns: repeat(auto-fill, 9.7em);
             grid-gap: 1.6em;
+        }
+
+        @include tabletS {
+            grid-gap: 1em;
         }
 
         .skillCard {
@@ -379,6 +455,12 @@ body {
         padding-bottom: 0;
     }
 
+    @include tabletS {
+        padding: 0.8em 3.5em;
+        height: 100%;
+        min-height: 100vh;
+    }
+
     h2 {
         @include pageTitle;
     }
@@ -406,23 +488,32 @@ body {
                 padding-bottom: 1.5em;
             }
 
+            @include tabletS {
+                justify-content: center;
+                flex-direction: column;
+            }
+
             .imgBox {
                 position: relative;
                 width: 22.88em;
                 height: 14em;
-                //border: 1px solid rgba(255,255,255,0.1);
                 border-radius: 0.2em;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                //box-shadow: 3px 3px 20px rgba(0,0,0,0.3);
                 margin-right: 2em;
 
                 @include tablet {
                     width: 20em;
                     height: 12.25em;
                     margin-right: 1.2em;
+                }
+
+                @include tabletS {
+                    margin-right: 0;
+                    margin-top: 2em;
+                    margin-bottom: 1em;
                 }
 
                 img {
@@ -445,6 +536,14 @@ body {
                 @include desctopMini {
                     max-width: 25em;
                     padding-top: 0;
+                }
+
+                @include tabletS {
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                    align-items: center;
+                    text-align: center;
                 }
 
                 &::before {
@@ -485,6 +584,10 @@ body {
 
                     @include tablet {
                         font-size: 2em;
+                    }
+
+                    @include tabletS {
+                        font-size: 1.6em;
                     }
                 }
 
@@ -536,6 +639,10 @@ body {
                     justify-content: flex-start;
                     align-items: center;
 
+                    @include tabletS {
+                        justify-content: center;
+                    }
+
                     a {
                         position: relative;
                         display: flex;
@@ -555,6 +662,10 @@ body {
 
                         @include desctopMini {
                             width: 9.4em;
+                        }
+
+                        @include tabletS {
+                            width: 9em;
                         }
 
                         ion-icon {
@@ -672,6 +783,14 @@ body {
         padding: 1.5em 4em;
     }
 
+    @include tablet {
+        padding: 1.5em 3.5em;
+    }
+
+    @include mobile {
+        padding: 1.5em 1.8em;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -698,6 +817,10 @@ body {
         background: linear-gradient(-60deg, rgba(117, 200, 109, 0.6), rgba(70, 148, 135, 0.4), rgba(70, 148, 135, 0.1), transparent);
         border-radius: 0.4em;
         transform: rotate(45deg);
+
+        @include tabletS {
+            right: 5em;
+        }
     }
 
     h2 {
@@ -742,6 +865,18 @@ body {
                 width: 100%;
                 max-width: 30em;
                 margin-bottom: 2em;
+                margin-right: 0;
+            }
+
+            @include tabletS {
+                max-width: calc(100% - 1.5em);
+                padding: 2em;
+                margin-bottom: 2.5em;
+            }
+
+            @include mobile {
+                max-width: calc(100% - 2em);
+                padding: 1.5em;
             }
 
             input, textarea {
@@ -759,6 +894,10 @@ body {
                 font-weight: 500;
                 font-size: 1.1em;
 
+                @include tabletS {
+                    font-size: 1em;
+                }
+
                 &::placeholder {
                     color: $ice;
                     font-weight: 400;
@@ -775,7 +914,7 @@ body {
                 position: relative;
                 width: 100%;
                 border: none;
-                padding: 0.5em 0.9em;
+                padding: 0.5em 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -788,12 +927,22 @@ body {
                 cursor: pointer;
                 transition: 0.3s ease-in-out;
 
+                @include tabletS {
+                    font-size: 1em;
+                }
+
                 ion-icon {
                     position: absolute;
                     right: 2em;
                     font-size: 1.1em;
                     color: $white;
                     transition: 0.3s ease-in-out;
+
+                    @include mobile {
+                        position: relative;
+                        right: auto;
+                        margin-left: 0.4em;
+                    }
                 }
 
                 &:hover {
@@ -803,6 +952,12 @@ body {
                     ion-icon {
                         right: 1.8em;
                         color: $black;
+
+                        @include mobile {
+                            position: relative;
+                            right: auto;
+                            margin-left: 0.4em;
+                        }
                     }
                 }
             }
@@ -816,6 +971,11 @@ body {
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
+
+            @include tabletS {
+                padding: 0;
+                padding-top: 2em;
+            }
 
             h3 {
                 font-size: 2em;
@@ -836,6 +996,16 @@ body {
                     margin-top: 0.5em;
                     margin-bottom: 1.5em;
                 }
+
+                @include tabletS {
+                    font-size: 1.6em;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                @include mobile {
+                    font-size: 1.2em;
+                }
             }
 
             span {
@@ -846,6 +1016,10 @@ body {
                 margin-bottom: 2em;
                 color: $ice;
 
+                @include mobile {
+                    font-size: 0.8em;
+                }
+
                 ion-icon {
                     font-size: 2.5em;
                     color: $medium;
@@ -854,6 +1028,10 @@ body {
                     @include desctopMini {
                         font-size: 1.8em;
                         margin-right: 0.6em;
+                    }
+
+                    @include mobile {
+                        margin-right: 0.4em;
                     }
                 }
 
@@ -897,6 +1075,11 @@ body {
         @include tablet {
             padding: 1em 4em;
         }
+
+        @include tabletS {
+            padding: 1em 3.5em;
+            letter-spacing: normal;
+        }
         
         span {
             position: relative;
@@ -932,9 +1115,19 @@ body {
                 transition: 0.3s ease-in-out;
                 z-index: 10;
 
+                @include tabletS {
+                    font-size: 3em;
+                    right: -0.5em;
+                    bottom: -0.25em;
+                }
+
                 &:hover {
                     color: $yellowgreen;
                     bottom: 0.1em;
+
+                    @include tabletS {
+                        bottom: -0.25em;
+                    }
                 }
 
                 ion-icon {

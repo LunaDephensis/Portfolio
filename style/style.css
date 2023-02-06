@@ -16,6 +16,11 @@ body {
     font-size: 15px;
   }
 }
+@media (max-width: 789px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 .banner {
   position: relative;
@@ -30,6 +35,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+@media (max-width: 789px) {
+  .banner {
+    height: 100%;
+    min-height: 100vh;
+    padding: 2.5em 0;
+  }
 }
 .banner::before {
   content: "";
@@ -56,6 +68,11 @@ body {
     right: -27.5em;
   }
 }
+@media (max-width: 500px) {
+  .banner::after {
+    right: -28.5em;
+  }
+}
 .banner nav {
   position: fixed;
   top: 0;
@@ -79,12 +96,27 @@ body {
     padding: 0 4em;
   }
 }
+@media (max-width: 789px) {
+  .banner nav {
+    padding: 0 3.5em;
+  }
+}
+@media (max-width: 500px) {
+  .banner nav {
+    padding: 0 1.8em;
+  }
+}
 .banner nav .name {
   position: relative;
   font-family: "Rock Salt", cursive;
   color: #2c6e7a;
   font-size: 1em;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  .banner nav .name {
+    font-size: 0.9em;
+  }
 }
 .banner nav .navbar {
   position: relative;
@@ -152,6 +184,20 @@ body {
     padding-right: 4em;
   }
 }
+@media (max-width: 789px) {
+  .banner .mainContent {
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .banner .mainContent {
+    padding-right: 1.8em;
+    padding-left: 1.8em;
+  }
+}
 .banner .mainContent .textBox {
   position: relative;
   max-width: 40%;
@@ -159,6 +205,14 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+}
+@media (max-width: 789px) {
+  .banner .mainContent .textBox {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 }
 .banner .mainContent .textBox h2 {
   font-size: 2.2em;
@@ -199,6 +253,16 @@ body {
   background: linear-gradient(45deg, rgba(117, 200, 109, 0.4), #469487 80%);
   z-index: 100;
 }
+@media (max-width: 789px) {
+  .banner .mainContent .profile {
+    margin-bottom: 2em;
+    align-self: flex-start;
+    max-width: 100%;
+    height: 21.4em;
+    background: transparent;
+    z-index: 10;
+  }
+}
 .banner .mainContent .profile .imgBox {
   position: relative;
   width: 15em;
@@ -220,6 +284,13 @@ body {
 @media (max-width: 991px) {
   .banner .mainContent .profile .imgBox {
     transform: translateX(65%);
+  }
+}
+@media (max-width: 789px) {
+  .banner .mainContent .profile .imgBox {
+    transform: none;
+    width: 17.1em;
+    height: 21.4em;
   }
 }
 .banner .mainContent .profile .imgBox img {
@@ -249,11 +320,25 @@ body {
     padding: 4em;
   }
 }
+@media (max-width: 789px) {
+  .skills {
+    padding: 3.5em;
+    padding-top: 4em;
+    height: 100%;
+    min-height: 100vh;
+  }
+}
+@media (max-width: 500px) {
+  .skills {
+    padding: 1.8em;
+    padding-top: 4em;
+  }
+}
 .skills h2 {
   position: absolute;
   top: -30px;
   width: 100%;
-  max-width: 43.75rem;
+  max-width: 43.75em;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -271,7 +356,21 @@ body {
 @media (max-width: 991px) {
   .skills h2 {
     font-size: 1.3em;
-    max-width: 36rem;
+    max-width: 36em;
+  }
+}
+@media (max-width: 789px) {
+  .skills h2 {
+    max-width: calc(100% - 7em);
+    height: 50px;
+    top: -25px;
+  }
+}
+@media (max-width: 500px) {
+  .skills h2 {
+    font-size: 1.2em;
+    letter-spacing: 0.06em;
+    max-width: calc(100% - 3.6em);
   }
 }
 .skills .mainContent {
@@ -292,6 +391,11 @@ body {
   .skills .mainContent {
     grid-template-columns: repeat(auto-fill, 9.7em);
     grid-gap: 1.6em;
+  }
+}
+@media (max-width: 789px) {
+  .skills .mainContent {
+    grid-gap: 1em;
   }
 }
 .skills .mainContent .skillCard {
@@ -385,11 +489,18 @@ body {
     padding-bottom: 0;
   }
 }
+@media (max-width: 789px) {
+  .projects {
+    padding: 0.8em 3.5em;
+    height: 100%;
+    min-height: 100vh;
+  }
+}
 .projects h2 {
   position: absolute;
   top: -30px;
   width: 100%;
-  max-width: 43.75rem;
+  max-width: 43.75em;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -407,7 +518,21 @@ body {
 @media (max-width: 991px) {
   .projects h2 {
     font-size: 1.3em;
-    max-width: 36rem;
+    max-width: 36em;
+  }
+}
+@media (max-width: 789px) {
+  .projects h2 {
+    max-width: calc(100% - 7em);
+    height: 50px;
+    top: -25px;
+  }
+}
+@media (max-width: 500px) {
+  .projects h2 {
+    font-size: 1.2em;
+    letter-spacing: 0.06em;
+    max-width: calc(100% - 3.6em);
   }
 }
 .projects .mainContent {
@@ -434,6 +559,12 @@ body {
     padding-bottom: 1.5em;
   }
 }
+@media (max-width: 789px) {
+  .projects .mainContent .projectCard {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 .projects .mainContent .projectCard .imgBox {
   position: relative;
   width: 22.88em;
@@ -450,6 +581,13 @@ body {
     width: 20em;
     height: 12.25em;
     margin-right: 1.2em;
+  }
+}
+@media (max-width: 789px) {
+  .projects .mainContent .projectCard .imgBox {
+    margin-right: 0;
+    margin-top: 2em;
+    margin-bottom: 1em;
   }
 }
 .projects .mainContent .projectCard .imgBox img {
@@ -471,6 +609,15 @@ body {
   .projects .mainContent .projectCard .textBox {
     max-width: 25em;
     padding-top: 0;
+  }
+}
+@media (max-width: 789px) {
+  .projects .mainContent .projectCard .textBox {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
   }
 }
 .projects .mainContent .projectCard .textBox::before {
@@ -513,6 +660,11 @@ body {
 @media (max-width: 991px) {
   .projects .mainContent .projectCard .textBox .title {
     font-size: 2em;
+  }
+}
+@media (max-width: 789px) {
+  .projects .mainContent .projectCard .textBox .title {
+    font-size: 1.6em;
   }
 }
 .projects .mainContent .projectCard .textBox .description {
@@ -564,6 +716,11 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+@media (max-width: 789px) {
+  .projects .mainContent .projectCard .textBox .links {
+    justify-content: center;
+  }
+}
 .projects .mainContent .projectCard .textBox .links a {
   position: relative;
   display: flex;
@@ -584,6 +741,11 @@ body {
 @media (max-width: 1115px) {
   .projects .mainContent .projectCard .textBox .links a {
     width: 9.4em;
+  }
+}
+@media (max-width: 789px) {
+  .projects .mainContent .projectCard .textBox .links a {
+    width: 9em;
   }
 }
 .projects .mainContent .projectCard .textBox .links a ion-icon {
@@ -684,6 +846,16 @@ body {
     padding: 1.5em 4em;
   }
 }
+@media (max-width: 991px) {
+  .contact {
+    padding: 1.5em 3.5em;
+  }
+}
+@media (max-width: 500px) {
+  .contact {
+    padding: 1.5em 1.8em;
+  }
+}
 .contact::before {
   content: "";
   position: absolute;
@@ -711,11 +883,16 @@ body {
   border-radius: 0.4em;
   transform: rotate(45deg);
 }
+@media (max-width: 789px) {
+  .contact::after {
+    right: 5em;
+  }
+}
 .contact h2 {
   position: absolute;
   top: -30px;
   width: 100%;
-  max-width: 43.75rem;
+  max-width: 43.75em;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -733,7 +910,21 @@ body {
 @media (max-width: 991px) {
   .contact h2 {
     font-size: 1.3em;
-    max-width: 36rem;
+    max-width: 36em;
+  }
+}
+@media (max-width: 789px) {
+  .contact h2 {
+    max-width: calc(100% - 7em);
+    height: 50px;
+    top: -25px;
+  }
+}
+@media (max-width: 500px) {
+  .contact h2 {
+    font-size: 1.2em;
+    letter-spacing: 0.06em;
+    max-width: calc(100% - 3.6em);
   }
 }
 .contact .mainContent {
@@ -777,6 +968,20 @@ body {
     width: 100%;
     max-width: 30em;
     margin-bottom: 2em;
+    margin-right: 0;
+  }
+}
+@media (max-width: 789px) {
+  .contact .mainContent .messengerBox {
+    max-width: calc(100% - 1.5em);
+    padding: 2em;
+    margin-bottom: 2.5em;
+  }
+}
+@media (max-width: 500px) {
+  .contact .mainContent .messengerBox {
+    max-width: calc(100% - 2em);
+    padding: 1.5em;
   }
 }
 .contact .mainContent .messengerBox input, .contact .mainContent .messengerBox textarea {
@@ -794,6 +999,11 @@ body {
   font-weight: 500;
   font-size: 1.1em;
 }
+@media (max-width: 789px) {
+  .contact .mainContent .messengerBox input, .contact .mainContent .messengerBox textarea {
+    font-size: 1em;
+  }
+}
 .contact .mainContent .messengerBox input::placeholder, .contact .mainContent .messengerBox textarea::placeholder {
   color: #cee5dd;
   font-weight: 400;
@@ -807,7 +1017,7 @@ body {
   position: relative;
   width: 100%;
   border: none;
-  padding: 0.5em 0.9em;
+  padding: 0.5em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -820,12 +1030,24 @@ body {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 789px) {
+  .contact .mainContent .messengerBox .submit {
+    font-size: 1em;
+  }
+}
 .contact .mainContent .messengerBox .submit ion-icon {
   position: absolute;
   right: 2em;
   font-size: 1.1em;
   color: #fff;
   transition: 0.3s ease-in-out;
+}
+@media (max-width: 500px) {
+  .contact .mainContent .messengerBox .submit ion-icon {
+    position: relative;
+    right: auto;
+    margin-left: 0.4em;
+  }
 }
 .contact .mainContent .messengerBox .submit:hover {
   background: #75c86d;
@@ -835,6 +1057,13 @@ body {
   right: 1.8em;
   color: #181c20;
 }
+@media (max-width: 500px) {
+  .contact .mainContent .messengerBox .submit:hover ion-icon {
+    position: relative;
+    right: auto;
+    margin-left: 0.4em;
+  }
+}
 .contact .mainContent .contactBox {
   position: relative;
   height: 100%;
@@ -843,6 +1072,12 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+}
+@media (max-width: 789px) {
+  .contact .mainContent .contactBox {
+    padding: 0;
+    padding-top: 2em;
+  }
 }
 .contact .mainContent .contactBox h3 {
   font-size: 2em;
@@ -866,6 +1101,18 @@ body {
     margin-bottom: 1.5em;
   }
 }
+@media (max-width: 789px) {
+  .contact .mainContent .contactBox h3 {
+    font-size: 1.6em;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .contact .mainContent .contactBox h3 {
+    font-size: 1.2em;
+  }
+}
 .contact .mainContent .contactBox span {
   position: relative;
   display: flex;
@@ -873,6 +1120,11 @@ body {
   align-items: center;
   margin-bottom: 2em;
   color: #cee5dd;
+}
+@media (max-width: 500px) {
+  .contact .mainContent .contactBox span {
+    font-size: 0.8em;
+  }
 }
 .contact .mainContent .contactBox span ion-icon {
   font-size: 2.5em;
@@ -883,6 +1135,11 @@ body {
   .contact .mainContent .contactBox span ion-icon {
     font-size: 1.8em;
     margin-right: 0.6em;
+  }
+}
+@media (max-width: 500px) {
+  .contact .mainContent .contactBox span ion-icon {
+    margin-right: 0.4em;
   }
 }
 .contact .mainContent .contactBox span a {
@@ -920,6 +1177,12 @@ body {
     padding: 1em 4em;
   }
 }
+@media (max-width: 789px) {
+  .contact footer {
+    padding: 1em 3.5em;
+    letter-spacing: normal;
+  }
+}
 .contact footer span {
   position: relative;
   display: flex;
@@ -949,9 +1212,21 @@ body {
   transition: 0.3s ease-in-out;
   z-index: 10;
 }
+@media (max-width: 789px) {
+  .contact footer .up a {
+    font-size: 3em;
+    right: -0.5em;
+    bottom: -0.25em;
+  }
+}
 .contact footer .up a:hover {
   color: #75c86d;
   bottom: 0.1em;
+}
+@media (max-width: 789px) {
+  .contact footer .up a:hover {
+    bottom: -0.25em;
+  }
 }
 .contact footer .up a ion-icon {
   margin-left: 0;

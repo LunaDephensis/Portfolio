@@ -2,7 +2,7 @@
     position: absolute;
     top: -30px;
     width: 100%;
-    max-width: 43.75rem;
+    max-width: 43.75em;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -19,6 +19,18 @@
 
     @include tablet {
         font-size: 1.3em;
-        max-width: 36rem;
+        max-width: 36em;
+    }
+
+    @include tabletS {
+        max-width: calc(100% - 7em);
+        height: 50px;
+        top: -25px;
+    }
+
+    @include mobile {
+        font-size: 1.2em;
+        letter-spacing: 0.06em;
+        max-width: calc(100% - 3.6em);
     }
 }
