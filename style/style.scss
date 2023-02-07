@@ -101,6 +101,19 @@ body {
             padding: 0 1.8em;
         }
 
+        &.active {
+            .mobileNav::before {
+                transform: translateY(0px) rotate(45deg);
+                box-shadow: 0 0 $black;
+                background: $black;
+            }
+
+            .mobileNav::after {
+                transform: translateY(0px) rotate(-45deg);
+                background: $black;
+            }
+        }
+
         .name {
             position: relative;
             font-family: 'Rock Salt', cursive;
@@ -119,6 +132,10 @@ body {
             justify-content: center;
             align-items: center;
             height: 100%;
+
+            @include tabletS {
+                display: none;
+            }
 
             li {
                 position: relative;
@@ -163,6 +180,41 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                }
+            }
+        }
+
+        .mobileNav {
+            display: none;
+
+            @include tabletS {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3.5em;
+                height: 3.5em;
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 2em;
+                    height: 2px;
+                    background: $ice;
+                    transform: translateY(-8px);
+                    box-shadow: 0 8px $ice;
+                    transition: 0.5s;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 2em;
+                    height: 2px;
+                    background: $ice;
+                    transform: translateY(8px);
+                    transition: 0.5s;
                 }
             }
         }

@@ -106,6 +106,15 @@ body {
     padding: 0 1.8em;
   }
 }
+.banner nav.active .mobileNav::before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 #181c20;
+  background: #181c20;
+}
+.banner nav.active .mobileNav::after {
+  transform: translateY(0px) rotate(-45deg);
+  background: #181c20;
+}
 .banner nav .name {
   position: relative;
   font-family: "Rock Salt", cursive;
@@ -124,6 +133,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+@media (max-width: 789px) {
+  .banner nav .navbar {
+    display: none;
+  }
 }
 .banner nav .navbar li {
   position: relative;
@@ -161,6 +175,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.banner nav .mobileNav {
+  display: none;
+}
+@media (max-width: 789px) {
+  .banner nav .mobileNav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5em;
+    height: 3.5em;
+    cursor: pointer;
+  }
+  .banner nav .mobileNav::before {
+    content: "";
+    position: absolute;
+    width: 2em;
+    height: 2px;
+    background: #cee5dd;
+    transform: translateY(-8px);
+    box-shadow: 0 8px #cee5dd;
+    transition: 0.5s;
+  }
+  .banner nav .mobileNav::after {
+    content: "";
+    position: absolute;
+    width: 2em;
+    height: 2px;
+    background: #cee5dd;
+    transform: translateY(8px);
+    transition: 0.5s;
+  }
 }
 .banner .mainContent {
   position: relative;
