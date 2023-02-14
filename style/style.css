@@ -664,6 +664,32 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.projects .mainContent .projectArrow {
+  display: none;
+}
+@media (max-width: 789px) {
+  .projects .mainContent .projectArrow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .projects .mainContent .projectArrow.prev {
+    top: calc(35% - 0.25em);
+    left: 0;
+    z-index: 1000;
+  }
+  .projects .mainContent .projectArrow.next {
+    top: calc(35% - 0.25em);
+    right: 0;
+    z-index: 1000;
+  }
+  .projects .mainContent .projectArrow ion-icon {
+    font-size: 4em;
+    color: #181c20;
+  }
+}
 .projects .mainContent .projectCard {
   position: relative;
   width: 100%;
@@ -673,32 +699,6 @@ body {
   margin-bottom: 2em;
   padding-bottom: 2em;
   border-bottom: 2px solid rgba(70, 148, 135, 0.3);
-}
-.projects .mainContent .projectCard .projectArrow {
-  display: none;
-}
-@media (max-width: 789px) {
-  .projects .mainContent .projectCard .projectArrow {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  .projects .mainContent .projectCard .projectArrow.prev {
-    top: calc(35% - 0.25em);
-    left: 0;
-    z-index: 1000;
-  }
-  .projects .mainContent .projectCard .projectArrow.next {
-    top: calc(35% - 0.25em);
-    right: 0;
-    z-index: 1000;
-  }
-  .projects .mainContent .projectCard .projectArrow ion-icon {
-    font-size: 4em;
-    color: #181c20;
-  }
 }
 @media (max-width: 991px) {
   .projects .mainContent .projectCard {
@@ -739,13 +739,39 @@ body {
   .projects .mainContent .projectCard .imgBox {
     margin-right: 0;
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 }
 .projects .mainContent .projectCard .imgBox img {
   position: relative;
   height: 100%;
   width: auto;
+}
+.projects .mainContent .projectCard .dots {
+  display: none;
+}
+@media (max-width: 789px) {
+  .projects .mainContent .projectCard .dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .projects .mainContent .projectCard .dots .dot {
+    height: 1em;
+    width: 1em;
+    margin: 1.8em 0.8em;
+    background: #181c20;
+    opacity: 0.6;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+  }
+  .projects .mainContent .projectCard .dots .dot.active {
+    opacity: 1;
+  }
 }
 .projects .mainContent .projectCard .textBox {
   position: relative;

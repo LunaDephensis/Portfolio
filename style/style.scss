@@ -614,6 +614,35 @@ body {
         align-items: center;
         flex-direction: column;
 
+        .projectArrow {
+            display: none;
+
+            @include tabletS {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &.prev {
+                    top: calc(35% - 0.25em);
+                    left: 0;
+                    z-index: 1000;
+                }
+
+                &.next {
+                    top: calc(35% - 0.25em);
+                    right: 0;
+                    z-index: 1000;
+                }
+
+                ion-icon {
+                    font-size: 4em;
+                    color: $black;
+                }
+            }
+        }
+
         .projectCard {
             position: relative;
             width: 100%;
@@ -624,34 +653,7 @@ body {
             padding-bottom: 2em;
             border-bottom: 2px solid rgba(70, 148, 135, 0.3);
 
-            .projectArrow {
-                display: none;
-
-                @include tabletS {
-                    position: absolute;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    cursor: pointer;
-
-                    &.prev {
-                        top: calc(35% - 0.25em);
-                        left: 0;
-                        z-index: 1000;
-                    }
-
-                    &.next {
-                        top: calc(35% - 0.25em);
-                        right: 0;
-                        z-index: 1000;
-                    }
-
-                    ion-icon {
-                        font-size: 4em;
-                        color: $black;
-                    }
-                }
-            }
+            
 
             @include tablet {
                 margin-bottom: 1.5em;
@@ -688,13 +690,41 @@ body {
                 @include tabletS {
                     margin-right: 0;
                     margin-top: 2em;
-                    margin-bottom: 2em;
+                    margin-bottom: 1em;
                 }
 
                 img {
                     position: relative;
                     height: 100%;
                     width: auto;
+                }
+            }
+
+            .dots {
+                display: none;
+
+                @include tabletS {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+
+                    .dot {
+                        height: 1em;
+                        width: 1em;
+                        margin: 1.8em 0.8em;
+                        background: $black;
+                        opacity: 0.6;
+                        border-radius: 50%;
+                        display: inline-block;
+                        transition: background-color 0.6s ease;
+                        cursor: pointer;
+
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
                 }
             }
 
