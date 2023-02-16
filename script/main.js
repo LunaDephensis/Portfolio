@@ -47,6 +47,29 @@ let prev = document.querySelector('.prev');
 let allDots = document.querySelectorAll('.dot');
 let projectNavBarElements = document.querySelectorAll('.projectNavbar li');
 
+const serviceID = "";
+const templateID = "";
+
+let sendButton = document.querySelector('#sendMessage');
+
+sendButton.addEventListener('click', () => {
+    let nameInputValue = document.querySelector('#fromName').value;
+    let emailInputValue = document.querySelector('#fromEmail').value;
+    let messageInputValue = document.querySelector('#message').value;
+    let contactTemplateParams = {
+        fromName: nameInputValue,
+        email: emailInputValue,
+        message: messageInputValue
+    };
+    emailjs.send(serviceID, templateID, contactTemplateParams)
+        .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        },
+        function(error) {
+        console.log('FAILED...', error);
+    });
+});
+
 document.addEventListener('DOMContentLoaded', ()=> {
     showProject(shownProjectIndex);
 });
