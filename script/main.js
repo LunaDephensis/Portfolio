@@ -1,5 +1,6 @@
 let menuToggle = document.querySelector('.mobileNav');
 let navigation = document.querySelector('nav');
+let mobileNavbar = document.querySelector('.mobileNavbar');
 let shownProjectIndex = 0;
 let projects = [
     {
@@ -46,28 +47,54 @@ let next = document.querySelector('.next');
 let prev = document.querySelector('.prev');
 let allDots = document.querySelectorAll('.dot');
 let projectNavBarElements = document.querySelectorAll('.projectNavbar li');
+let emptyInputMessage = document.querySelector('.emptyInput');
+let invalidEmailMessage = document.querySelector('.invalidEmail');
+let successfulSendingMessage = document.querySelector('.successfulSending');
 
 const serviceID = "";
 const templateID = "";
 
 let sendButton = document.querySelector('#sendMessage');
 
+function validateEmail(email) {
+    return String(email).toLowerCase().match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
 sendButton.addEventListener('click', () => {
+    emptyInputMessage.classList.remove('active');
+    invalidEmailMessage.classList.remove('active');
+    successfulSendingMessage.classList.remove('active');
     let nameInputValue = document.querySelector('#fromName').value;
     let emailInputValue = document.querySelector('#fromEmail').value;
     let messageInputValue = document.querySelector('#message').value;
-    let contactTemplateParams = {
-        fromName: nameInputValue,
-        email: emailInputValue,
-        message: messageInputValue
-    };
-    emailjs.send(serviceID, templateID, contactTemplateParams)
-        .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        },
-        function(error) {
-        console.log('FAILED...', error);
-    });
+    console.log(nameInputValue, emailInputValue, messageInputValue);
+    if(!nameInputValue || !emailInputValue || !messageInputValue) {
+        emptyInputMessage.classList.add('active');
+    }
+    else if(!validateEmail(emailInputValue)) {
+        invalidEmailMessage.classList.add('active');
+    }
+    else {
+        let contactTemplateParams = {
+            fromName: nameInputValue,
+            email: emailInputValue,
+            message: messageInputValue
+        };
+        emailjs.send(serviceID, templateID, contactTemplateParams)
+            .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            },
+            function(error) {
+            console.log('FAILED...', error);
+        });
+        nameInputValue = "";
+        emailInputValue = "";
+        messageInputValue = "";
+        successfulSendingMessage.classList.add('active');
+    }
+    
 });
 
 document.addEventListener('DOMContentLoaded', ()=> {
@@ -128,8 +155,14 @@ function slideProject(n) {
     showProject(shownProjectIndex);
 }
 
+function scrollToElement(elementId) {
+    let element = document.querySelector(elementId);
+    window.scroll(0, element.offsetTop - 90);
+}
+
 menuToggle.addEventListener('click', () => {
-    navigation.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+    mobileNavbar.classList.toggle('active');
 });
 
 window.addEventListener("scroll", () => {

@@ -9,22 +9,23 @@
     </head>
 
     <body>
-        <section class="banner">
+        <section class="banner" id="banner">
             <nav>
                 <span class="name">Zámbó Nikolett</span>
                 <ul class="navbar">
-                    <li><a href="#">Technológiák</a></li>
-                    <li><a href="#">Projektek</a></li>
-                    <li><a href="#">Kapcsolat</a></li>
+                    <li><a onclick="scrollToElement('#skills')">Technológiák</a></li>
+                    <li><a onclick="scrollToElement('#projects')">Projektek</a></li>
+                    <li><a onclick="scrollToElement('#contact')">Kapcsolat</a></li>
                 </ul>
                 <div class="mobileNav">
                 </div>
-                <ul class="mobileNavbar">
-                    <li><a href="#">Technológiák</a></li>
-                    <li><a href="#">Projektek</a></li>
-                    <li><a href="#">Kapcsolat</a></li>
-                </ul>
+                
             </nav>
+            <ul class="mobileNavbar">
+                <li><a onclick="scrollToElement('#skills')">Technológiák</a></li>
+                <li><a onclick="scrollToElement('#projects')">Projektek</a></li>
+                <li><a onclick="scrollToElement('#contact')">Kapcsolat</a></li>
+            </ul>
             <div class="mainContent">
                 <div class="textBox">
                     <h2>Zámbó Nikolett</h2>
@@ -38,7 +39,7 @@
                 </div>
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <h2>Használt technológiák</h2>
             <div class="mainContent">
                 <div class="skillCard">
@@ -85,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h2>Projektek</h2>
             <div class="mainContent">
                 <span class="projectArrow prev"><ion-icon name="chevron-back-circle"></ion-icon></span>
@@ -141,18 +142,21 @@
                 </ul>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2>Kapcsolat</h2>
             <div class="mainContent">
                 <div class="messengerBox">
+                    <span class="errorMessage emptyInput">Az üzenet elküldéséhez minden mezőt ki kell tölteni.</span>
+                    <span class="errorMessage invalidEmail">Helytelen email cím!</span>
+                    <span class="successfulSending">Üzenet sikeresen elküldve!</span>
                     <input id="fromName" type="text" name="fromName" placeholder="Név">
                     <input id="fromEmail" type="email" name="email" placeholder="Email cím">
-                    <textarea id="message" name="message" placeholder="Ide írd az üzeneted"></textarea>
+                    <textarea id="message" name="message" placeholder="Ide írd az üzeneted" maxlength="5000"></textarea>
                     <button id="sendMessage" class="submit">Üzenet elküldése <ion-icon name="send"></ion-icon></button>
                 </div>
                 <div class="contactBox">
                     <h3>Lépjünk kapcsolatba!</h3>
-                    <span><ion-icon name="mail"></ion-icon> engetsu96@gmail.com</span>
+                    <span><ion-icon name="mail"></ion-icon>zambo.nikolett96@gmail.com</span>
                     <span><ion-icon name="logo-linkedin"></ion-icon> <a href="#">Linkedin fiókom</a></span>
                     <span class="githubLink"><ion-icon name="logo-github"></ion-icon> Nézd meg a portfólióm kódját  <a href="#">Github</a> -on</span>
                 </div>
@@ -160,7 +164,7 @@
             <footer>
                 <span>icons from <a target="_blank" href="https://ionic.io/ionicons"><ion-icon name="logo-ionic"></ion-icon></a></span>
                 <span>2023. Zámbó Nikolett</span>
-                <span class="up"><a href="#"><ion-icon name="arrow-up-circle"></ion-icon></a></span>
+                <span class="up"><a href="#banner"><ion-icon name="arrow-up-circle"></ion-icon></a></span>
             </footer>
         </section>
 
@@ -178,7 +182,7 @@
             })();
         </script>
 
-        <script type="module" src="script/main.js"></script>
+        <script src="script/main.js"></script>
         
     </body>
 </html>

@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -127,19 +128,6 @@ body {
 .banner nav.sticky .mobileNav::after {
   background: #181c20;
 }
-.banner nav.active .mobileNav::before {
-  transform: translateY(0px) rotate(45deg);
-  box-shadow: 0 0 #181c20;
-  background: #181c20;
-  z-index: 1000;
-}
-.banner nav.active .mobileNav::after {
-  transform: translateY(0px) rotate(-45deg);
-  background: #181c20;
-}
-.banner nav.active .mobileNavbar {
-  right: 0;
-}
 .banner nav .name {
   position: relative;
   font-family: "Rock Salt", cursive;
@@ -201,6 +189,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10000;
 }
 .banner nav .mobileNav {
   display: none;
@@ -214,7 +203,7 @@ body {
     width: 3.5em;
     height: 3.5em;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1001;
   }
   .banner nav .mobileNav::before {
     content: "";
@@ -235,54 +224,72 @@ body {
     transform: translateY(8px);
     transition: 0.5s;
   }
+  .banner nav .mobileNav.active::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #181c20;
+    background: #181c20;
+    z-index: 1000;
+  }
+  .banner nav .mobileNav.active::after {
+    transform: translateY(0px) rotate(-45deg);
+    background: #181c20;
+  }
 }
-.banner nav .mobileNavbar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100vh;
-  padding: 4em 0;
-  background: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 100;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  transition: 0.5s;
+.banner .mobileNavbar {
+  display: none;
 }
-.banner nav .mobileNavbar li {
-  list-style: none;
-  width: 100%;
-  padding: 1em 4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.banner nav .mobileNavbar li a {
-  position: relative;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.6em;
-  color: #181c20;
-  border-bottom: 3px solid transparent;
-}
-.banner nav .mobileNavbar li a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  border-bottom: 3px solid #181c20;
-  transition: 0.5s ease-in-out;
-}
-.banner nav .mobileNavbar li a:hover::after {
-  width: 100%;
+@media (max-width: 789px) {
+  .banner .mobileNavbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    padding: 4em 0;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1001;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+  }
+  .banner .mobileNavbar.active {
+    right: 0;
+  }
+  .banner .mobileNavbar li {
+    list-style: none;
+    width: 100%;
+    padding: 1em 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .mobileNavbar li a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6em;
+    color: #181c20;
+    border-bottom: 3px solid transparent;
+  }
+  .banner .mobileNavbar li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 3px solid #181c20;
+    transition: 0.5s ease-in-out;
+  }
+  .banner .mobileNavbar li a:hover::after {
+    width: 100%;
+  }
 }
 .banner .mainContent {
   position: relative;
@@ -1193,6 +1200,45 @@ body {
     max-width: calc(100% - 2em);
     padding: 1.5em;
   }
+}
+.contact .mainContent .messengerBox .errorMessage {
+  position: relative;
+  display: none;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9em;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 789px) {
+  .contact .mainContent .messengerBox .errorMessage {
+    font-size: 0.8em;
+  }
+}
+.contact .mainContent .messengerBox .errorMessage.active {
+  display: block;
+}
+.contact .mainContent .messengerBox .successfulSending {
+  position: relative;
+  display: none;
+  width: 100%;
+  text-align: center;
+  color: #75c86d;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 789px) {
+  .contact .mainContent .messengerBox .successfulSending {
+    font-size: 0.9em;
+  }
+}
+.contact .mainContent .messengerBox .successfulSending.active {
+  display: block;
 }
 .contact .mainContent .messengerBox input, .contact .mainContent .messengerBox textarea {
   position: relative;
