@@ -87,7 +87,7 @@ body {
         z-index: 10000;
         transition: 0.5s ease-out;
 
-        @include desctopMini {
+        @include desktopMini {
             padding: 0 5.6em;
         }
 
@@ -161,11 +161,11 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border-bottom: 3px solid transparent;
+                //border-bottom: 3px solid transparent;
                 margin-left: 2.5em;
                 
 
-                &::after {
+               /* &::after {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -176,12 +176,12 @@ body {
                     transition: 0.5s ease-in-out;
                 }
 
-                &:hover {
+                &:hover, &.active {
                     
                     &::after {
                         width: 100%;
                     }
-                }
+                }*/
 
                 &:nth-child(1) {
                     margin-left: 0;
@@ -197,6 +197,25 @@ body {
                     justify-content: center;
                     align-items: center;
                     z-index: 10000;
+                    border-bottom: 3px solid transparent;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 100%;
+                        border-bottom: 3px solid $black;
+                        transition: 0.5s ease-in-out;
+                    }
+    
+                    &:hover, &.active {
+                        
+                        &::after {
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
@@ -310,7 +329,7 @@ body {
                     transition: 0.5s ease-in-out;
                 }
 
-                &:hover {
+                &:hover, &.active {
                     
                     &::after {
                         width: 100%;
@@ -334,7 +353,7 @@ body {
         padding-right: 6.25em;
         z-index: 10;
 
-        @include desctopMini {
+        @include desktopMini {
             padding-right: 5.6em;
         }
 
@@ -433,7 +452,7 @@ body {
                 align-items: center;
                 box-shadow: 3px 3px 20px rgba(0,0,0,0.3);
 
-                @include desctopMini {
+                @include desktopMini {
                     transform: translateX(80%);
                 }
 
@@ -468,7 +487,7 @@ body {
     background: $deepDark;
     padding: 6.25em;
 
-    @include desctopMini {
+    @include desktopMini {
         padding: 5.6em;
     }
 
@@ -500,7 +519,7 @@ body {
         grid-gap: 2.8em;
         z-index: 10;
 
-        @include desctopMini {
+        @include desktopMini {
             grid-template-columns: repeat(auto-fill, 10em);
         }
 
@@ -598,7 +617,7 @@ body {
     padding: 1.5em 6.25em;
     padding-bottom: 0;
 
-    @include desctopMini {
+    @include desktopMini {
         padding: 1em 5.6em;
         padding-bottom: 0;
     }
@@ -750,7 +769,7 @@ body {
                 align-items: flex-start;
                 flex-direction: column;
 
-                @include desctopMini {
+                @include desktopMini {
                     max-width: 25em;
                     padding-top: 0;
                 }
@@ -780,7 +799,7 @@ body {
                     text-shadow: 1px 1px 10px rgba(0,0,0,0.08);
                     z-index: 1;
 
-                    @include desctopMini {
+                    @include desktopMini {
                         display: none;
                     }
                 }
@@ -795,7 +814,7 @@ body {
                     margin-bottom: 0.5em;
                     z-index: 10;
 
-                    @include desctopMini {
+                    @include desktopMini {
                         font-size: 2.2em;
                     }
 
@@ -814,7 +833,7 @@ body {
                     margin-bottom: 0.5em;
                     z-index: 10;
 
-                    @include desctopMini {
+                    @include desktopMini {
                         line-height: 1.3em;
                     }
 
@@ -828,7 +847,7 @@ body {
                     width: 100%;
                     margin-bottom: 2em;
 
-                    @include desctopMini {
+                    @include desktopMini {
                         margin-bottom: 1.5em;
                     }
 
@@ -847,7 +866,7 @@ body {
                         border-top: 1px solid rgba(255,255,255,0.2);
                         border-left: 1px solid rgba(255,255,255,0.2);
 
-                        @include desctopMini {
+                        @include desktopMini {
                             font-size: 0.9em;
                         }
                     }
@@ -882,7 +901,7 @@ body {
                         box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
                         transition: 0.3s ease-in-out;
 
-                        @include desctopMini {
+                        @include desktopMini {
                             width: 9.4em;
                         }
 
@@ -966,7 +985,7 @@ body {
                     overflow: hidden;
                     margin-bottom: 1em;
 
-                    @include desctopMini {
+                    @include desktopMini {
                         width: 8.9em;
                         height: 6.6em;
                     }
@@ -1013,7 +1032,7 @@ body {
                 linear-gradient(336deg, rgba(16, 46, 47,1), rgba(16, 46, 47,0.6) 70.71%);
     padding: 2em 6.25em;
 
-    @include desctopMini {
+    @include desktopMini {
         font-size: 15px;
         padding: 1.5em 5.6em;
     }
@@ -1097,7 +1116,7 @@ body {
             backdrop-filter: blur(12px);
             margin-right: 1.5em;
 
-            @include desctopMini {
+            @include desktopMini {
                 padding: 2.5em;
             }
 
@@ -1268,7 +1287,7 @@ body {
                 margin-bottom: 2.5em;
                 color: $light;
 
-                @include desctopMini {
+                @include desktopMini {
                     font-size: 1.5em;
                     letter-spacing: 0.1em;
                 }
@@ -1307,7 +1326,7 @@ body {
                     color: $medium;
                     margin-right: 1em;
 
-                    @include desctopMini {
+                    @include desktopMini {
                         font-size: 1.8em;
                         margin-right: 0.6em;
                     }

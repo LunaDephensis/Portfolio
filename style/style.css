@@ -161,21 +161,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 3px solid transparent;
   margin-left: 2.5em;
-}
-.banner nav .navbar li::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  border-bottom: 3px solid #181c20;
-  transition: 0.5s ease-in-out;
-}
-.banner nav .navbar li:hover::after {
-  width: 100%;
+  /* &::after {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 0;
+       height: 100%;
+       border-bottom: 3px solid $black;
+       transition: 0.5s ease-in-out;
+   }
+
+   &:hover, &.active {
+
+       &::after {
+           width: 100%;
+       }
+   }*/
 }
 .banner nav .navbar li:nth-child(1) {
   margin-left: 0;
@@ -190,6 +193,20 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 10000;
+  border-bottom: 3px solid transparent;
+}
+.banner nav .navbar li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-bottom: 3px solid #181c20;
+  transition: 0.5s ease-in-out;
+}
+.banner nav .navbar li a:hover::after, .banner nav .navbar li a.active::after {
+  width: 100%;
 }
 .banner nav .mobileNav {
   display: none;
@@ -287,7 +304,7 @@ body {
     border-bottom: 3px solid #181c20;
     transition: 0.5s ease-in-out;
   }
-  .banner .mobileNavbar li a:hover::after {
+  .banner .mobileNavbar li a:hover::after, .banner .mobileNavbar li a.active::after {
     width: 100%;
   }
 }

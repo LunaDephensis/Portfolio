@@ -1,4 +1,4 @@
-@mixin desctopMini {
+@mixin desktopMini {
     @media(max-width: 1115px) {
         @content;
     }

@@ -50,6 +50,11 @@ let projectNavBarElements = document.querySelectorAll('.projectNavbar li');
 let emptyInputMessage = document.querySelector('.emptyInput');
 let invalidEmailMessage = document.querySelector('.invalidEmail');
 let successfulSendingMessage = document.querySelector('.successfulSending');
+let desktopNavElements = document.querySelectorAll('.navbar li a');
+let mobileNavElements = document.querySelectorAll('.mobileNavbar li a');
+let skillsPage = document.querySelector('#skills');
+let projectsPage = document.querySelector('#projects');
+let contactPage = document.querySelector('#contact');
 
 const serviceID = "";
 const templateID = "";
@@ -155,9 +160,18 @@ function slideProject(n) {
     showProject(shownProjectIndex);
 }
 
-function scrollToElement(elementId) {
+function scrollToElement(event, elementId) {
+    desktopNavElements.forEach((element) => {
+        element.classList.remove('active');
+    });
+    mobileNavElements.forEach((element) => {
+        element.classList.remove('active');
+    });
     let element = document.querySelector(elementId);
     window.scroll(0, element.offsetTop - 90);
+    event.target.classList.add('active');
+    mobileNavbar.classList.remove('active');
+    menuToggle.classList.remove('active');
 }
 
 menuToggle.addEventListener('click', () => {
@@ -168,3 +182,35 @@ menuToggle.addEventListener('click', () => {
 window.addEventListener("scroll", () => {
     navigation.classList.toggle("sticky", window.scrollY > 0);
 });
+
+window.addEventListener("scroll", () => {
+    
+    if(window.scrollY > skillsPage.offsetTop - 150 && window.scrollY < projectsPage.offsetTop - 150) {
+        removeClassFrom(desktopNavElements);
+        removeClassFrom(mobileNavElements);
+        desktopNavElements[0].classList.add('active');
+        mobileNavElements[0].classList.add('active');
+    }
+    else if(window.scrollY > projectsPage.offsetTop - 150 && window.scrollY < contactPage.offsetTop - 150) {
+        removeClassFrom(desktopNavElements);
+        removeClassFrom(mobileNavElements);
+        desktopNavElements[1].classList.add('active');
+        mobileNavElements[1].classList.add('active');
+    }
+    else if(window.scrollY > contactPage.offsetTop - 150) {
+        removeClassFrom(desktopNavElements);
+        removeClassFrom(mobileNavElements);
+        desktopNavElements[2].classList.add('active');
+        mobileNavElements[2].classList.add('active');
+    }
+    else {
+        removeClassFrom(desktopNavElements);
+        removeClassFrom(mobileNavElements);
+    }
+});
+
+function removeClassFrom(elementList) {
+    elementList.forEach((element) => {
+        element.classList.remove('active');
+    });
+}
