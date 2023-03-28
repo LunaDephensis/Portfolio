@@ -6,16 +6,16 @@ let projects = [
     {
         image: "images/recipebook.png",
         title: "Recipe Book",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero alias illum magni repudiandae non reprehenderit minus corporis nisi earum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, eos.",
-        technologies: ["Sass", "Javascript", "Vue", "Pinia"],
+        description: "A Recipe Book egy recepteket kezelő full-stack alkalmazás. Bejelentkezés után hozzáférhetünk a saját receptgyűjteményünkhöz, hozzáadhatunk újakat, vagy módosíthatjuk a meglévő receptjeinket.",
+        technologies: ["Vue", "ExpressJS", "PostgreSQL", "Sass"],
         demo: "#",
         github: "#"
     },
     {
         image: "images/recipebook.png",
         title: "History Quiz",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero alias illum magni repudiandae non reprehenderit minus corporis nisi earum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, eos.",
-        technologies: ["Sass", "Javascript", "Vue", "Pinia"],
+        description: "Létrehoztam egy történelmi kvízjátékot, amiben a játékosok különböző témakörökben tehetik próbára a tudásukat. A helyes válaszok után pontokat szerezhetnek, melyekkel kitüntetéseket oldhatnak fel. Eredményeik a local storageban lesznek eltárolva.",
+        technologies: ["Sass", "Vue"],
         demo: "#",
         github: "#"
     },

@@ -115,11 +115,6 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  /*@include tabletS {
-      background: transparent;
-      backdrop-filter: none;
-      box-shadow: none;
-  }*/
 }
 .banner nav.sticky .mobileNav::before {
   box-shadow: 0 8px #181c20;
@@ -162,23 +157,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 2.5em;
-  /* &::after {
-       content: '';
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 0;
-       height: 100%;
-       border-bottom: 3px solid $black;
-       transition: 0.5s ease-in-out;
-   }
-
-   &:hover, &.active {
-
-       &::after {
-           width: 100%;
-       }
-   }*/
 }
 .banner nav .navbar li:nth-child(1) {
   margin-left: 0;
@@ -641,6 +619,11 @@ body {
     min-height: 100vh;
   }
 }
+@media (max-width: 500px) {
+  .projects {
+    padding-bottom: 4em;
+  }
+}
 .projects h2 {
   position: absolute;
   top: -30px;
@@ -816,32 +799,10 @@ body {
 @media (max-width: 789px) {
   .projects .mainContent .projectCard .textBox {
     width: 100%;
-    max-width: calc(100% - 9em);
+    max-width: 100%;
     height: auto;
     align-items: center;
     text-align: center;
-  }
-}
-.projects .mainContent .projectCard .textBox::before {
-  content: "Recipe Book";
-  position: absolute;
-  top: -25%;
-  left: -10%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5.5em;
-  line-height: 1.1em;
-  font-family: "Rock Salt", cursive;
-  color: rgba(255, 255, 255, 0.5);
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
-  z-index: 1;
-}
-@media (max-width: 1115px) {
-  .projects .mainContent .projectCard .textBox::before {
-    display: none;
   }
 }
 .projects .mainContent .projectCard .textBox .title {
@@ -898,6 +859,10 @@ body {
 @media (max-width: 789px) {
   .projects .mainContent .projectCard .textBox .techBar {
     margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 .projects .mainContent .projectCard .textBox .techBar span {
@@ -910,6 +875,7 @@ body {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.4em;
 }
 @media (max-width: 1115px) {
   .projects .mainContent .projectCard .textBox .techBar span {
@@ -954,6 +920,11 @@ body {
 @media (max-width: 789px) {
   .projects .mainContent .projectCard .textBox .links a {
     width: 9em;
+  }
+}
+@media (max-width: 500px) {
+  .projects .mainContent .projectCard .textBox .links a {
+    min-width: 8em;
   }
 }
 .projects .mainContent .projectCard .textBox .links a ion-icon {
