@@ -386,8 +386,8 @@ body {
 
             p {
                 color: $dark;
-                opacity: 0.8;
-                font-weight: 400;
+                opacity: 0.9;
+                font-weight: 500;
             }
         }
 
@@ -795,6 +795,16 @@ body {
 
                     @include tablet {
                         margin-bottom: 1.5em;
+                    }
+
+                    a {
+                        font-weight: 600;
+                        color: $medium;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $yellowgreen;
+                        }
                     }
                 }
 

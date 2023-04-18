@@ -361,8 +361,8 @@ body {
 }
 .banner .mainContent .textBox p {
   color: #102e2f;
-  opacity: 0.8;
-  font-weight: 400;
+  opacity: 0.9;
+  font-weight: 500;
 }
 .banner .mainContent .profile {
   position: relative;
@@ -845,6 +845,14 @@ body {
   .projects .mainContent .projectCard .textBox .description {
     margin-bottom: 1.5em;
   }
+}
+.projects .mainContent .projectCard .textBox .description a {
+  font-weight: 600;
+  color: #469487;
+  text-decoration: none;
+}
+.projects .mainContent .projectCard .textBox .description a:hover {
+  color: #75c86d;
 }
 .projects .mainContent .projectCard .textBox .techBar {
   position: relative;

@@ -7,7 +7,7 @@ let projects = [
         image: "images/recipebook.png",
         title: "Recipe Book",
         description: "A Recipe Book egy recepteket kezelő full-stack alkalmazás. Bejelentkezés után hozzáférhetünk a saját receptgyűjteményünkhöz, hozzáadhatunk újakat, vagy módosíthatjuk a meglévő receptjeinket.",
-        technologies: ["Vue", "ExpressJS", "PostgreSQL", "Sass"],
+        technologies: ["Vue", "ExpressJS", "PostgreSQL", "Sass", "REST API"],
         demo: "#",
         github: "#"
     },
@@ -22,15 +22,15 @@ let projects = [
     {
         image: "images/recipebook.png",
         title: "Ghibli Movie List",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero alias illum magni repudiandae non reprehenderit minus corporis nisi earum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, eos.",
-        technologies: ["Sass", "Javascript"],
+        description: "A projekt során egy olyan filmlista létrehozása volt a célom, ahol a keresésen túl a felhasználónak lehetősége van személyre szabható szűrésre és rendszerezésre egyaránt. Az adatokat a harmadik féltől származó Ghibli API biztosítja.",
+        technologies: ["Sass", "Javascript", "REST API"],
         demo: "#",
         github: "#"
     },
     {
         image: "images/recipebook.png",
         title: "Space Tourism",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem vero alias illum magni repudiandae non reprehenderit minus corporis nisi earum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, eos.",
+        description: "A dizájn pontos megvalósítására törekedtem a Space Tourism nevű Frontend Mentor challenge teljesítése közben. A challenge részletes leírása megtekinthető <a target='_blank' href='https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3'>ITT</a>.",
         technologies: ["Sass", "Javascript", "Vue"],
         demo: "#",
         github: "#"
