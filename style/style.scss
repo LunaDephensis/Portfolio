@@ -689,6 +689,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 margin-right: 2em;
+                border: 1px solid rgba(255,255,255,0.5);
 
                 @include tablet {
                     width: 20em;
@@ -959,6 +960,7 @@ body {
                     border-radius: 0.2em;
                     overflow: hidden;
                     margin-bottom: 1em;
+                    border: 1px solid rgba(255,255,255,0.5);
 
                     @include desktopMini {
                         width: 8.9em;

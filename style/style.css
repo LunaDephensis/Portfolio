@@ -734,6 +734,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 991px) {
   .projects .mainContent .projectCard .imgBox {
@@ -1003,6 +1004,7 @@ body {
   border-radius: 0.2em;
   overflow: hidden;
   margin-bottom: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 1115px) {
   .projects .mainContent .projectNavbar li .imgBox {

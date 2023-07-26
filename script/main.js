@@ -4,36 +4,44 @@ let mobileNavbar = document.querySelector('.mobileNavbar');
 let shownProjectIndex = 0;
 let projects = [
     {
-        image: "images/recipebook.png",
+        image: "images/recipe-bgrounded.png",
         title: "Recipe Book",
         description: "A Recipe Book egy recepteket kezelő full-stack alkalmazás. Bejelentkezés után hozzáférhetünk a saját receptgyűjteményünkhöz, hozzáadhatunk újakat, vagy módosíthatjuk a meglévő receptjeinket.",
         technologies: ["Vue", "ExpressJS", "PostgreSQL", "Sass", "REST API"],
         demo: "#",
-        github: "#"
+        github: "https://github.com/LunaDephensis/Recipebook"
     },
     {
-        image: "images/recipebook.png",
+        image: "images/history-bgrounded.png",
         title: "History Quiz",
         description: "Létrehoztam egy történelmi kvízjátékot, amiben a játékosok különböző témakörökben tehetik próbára a tudásukat. A helyes válaszok után pontokat szerezhetnek, melyekkel kitüntetéseket oldhatnak fel. Eredményeik a local storageban lesznek eltárolva.",
         technologies: ["Sass", "Vue"],
         demo: "#",
-        github: "#"
+        github: "https://github.com/LunaDephensis/HistoryQuiz"
     },
     {
-        image: "images/recipebook.png",
+        image: "images/ghibli-bgrounded2.png",
         title: "Ghibli Movie List",
         description: "A projekt során egy olyan filmlista létrehozása volt a célom, ahol a keresésen túl a felhasználónak lehetősége van személyre szabható szűrésre és rendszerezésre egyaránt. Az adatokat a harmadik féltől származó Ghibli API biztosítja.",
         technologies: ["Sass", "Javascript", "REST API"],
         demo: "#",
-        github: "#"
+        github: "https://github.com/LunaDephensis/GhibliMovieList"
     },
     {
-        image: "images/recipebook.png",
+        image: "images/space-bgrounded.png",
         title: "Space Tourism",
         description: "A dizájn pontos megvalósítására törekedtem a Space Tourism nevű Frontend Mentor challenge teljesítése közben. A challenge részletes leírása megtekinthető <a target='_blank' href='https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3'>ITT</a>.",
         technologies: ["Sass", "Javascript", "Vue"],
         demo: "#",
-        github: "#"
+        github: "https://github.com/LunaDephensis/SpaceTourism"
+    },
+    {
+        image: "images/recipe-bgrounded.png",
+        title: "Countries",
+        description: "Ezt a Frontend Mentor challenge-et a Tailwind CSS framework és a React együttes felhasználásával valósítottam meg. A challenge részletes leírása megtekinthető <a target='_blank' href='https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca'>ITT</a>.",
+        technologies: ["Tailwind", "React", "REST API"],
+        demo: "#",
+        github: "https://github.com/LunaDephensis/countries-react"
     }
 ];
 
