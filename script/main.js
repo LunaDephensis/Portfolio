@@ -8,7 +8,7 @@ let projects = [
         title: "Recipe Book",
         description: "A Recipe Book egy recepteket kezelő full-stack alkalmazás. Bejelentkezés után hozzáférhetünk a saját receptgyűjteményünkhöz, hozzáadhatunk újakat, vagy módosíthatjuk a meglévő receptjeinket.",
         technologies: ["Vue", "ExpressJS", "PostgreSQL", "Sass", "REST API"],
-        demo: "#",
+        demo: "https://recipebook-frontend.fly.dev/",
         github: "https://github.com/LunaDephensis/Recipebook"
     },
     {
@@ -16,7 +16,7 @@ let projects = [
         title: "History Quiz",
         description: "Létrehoztam egy történelmi kvízjátékot, amiben a játékosok különböző témakörökben tehetik próbára a tudásukat. A helyes válaszok után pontokat szerezhetnek, melyekkel kitüntetéseket oldhatnak fel. Eredményeik a local storageban lesznek eltárolva.",
         technologies: ["Sass", "Vue"],
-        demo: "#",
+        demo: "https://historyquiz-demo.netlify.app/",
         github: "https://github.com/LunaDephensis/HistoryQuiz"
     },
     {
@@ -32,15 +32,15 @@ let projects = [
         title: "Space Tourism",
         description: "A dizájn pontos megvalósítására törekedtem a Space Tourism nevű Frontend Mentor challenge teljesítése közben. A challenge részletes leírása megtekinthető <a target='_blank' href='https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3'>ITT</a>.",
         technologies: ["Sass", "Javascript", "Vue"],
-        demo: "#",
+        demo: "https://spacetourism-demo.netlify.app/destination",
         github: "https://github.com/LunaDephensis/SpaceTourism"
     },
     {
-        image: "images/recipe-bgrounded.png",
+        image: "images/countries-bgrounded.png",
         title: "Countries",
         description: "Ezt a Frontend Mentor challenge-et a Tailwind CSS framework és a React együttes felhasználásával valósítottam meg. A challenge részletes leírása megtekinthető <a target='_blank' href='https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca'>ITT</a>.",
         technologies: ["Tailwind", "React", "REST API"],
-        demo: "#",
+        demo: "https://countries-react-demo.netlify.app/",
         github: "https://github.com/LunaDephensis/countries-react"
     }
 ];
