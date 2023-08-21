@@ -24,7 +24,7 @@ let projects = [
         title: "Ghibli Movie List",
         description: "A projekt során egy olyan filmlista létrehozása volt a célom, ahol a keresésen túl a felhasználónak lehetősége van személyre szabható szűrésre és rendszerezésre egyaránt. Az adatokat a harmadik féltől származó Ghibli API biztosítja.",
         technologies: ["Sass", "Javascript", "REST API"],
-        demo: "#",
+        demo: "https://ghiblimovielist-demo.netlify.app/",
         github: "https://github.com/LunaDephensis/GhibliMovieList"
     },
     {
@@ -57,6 +57,7 @@ let allDots = document.querySelectorAll('.dot');
 let projectNavBarElements = document.querySelectorAll('.projectNavbar li');
 let emptyInputMessage = document.querySelector('.emptyInput');
 let invalidEmailMessage = document.querySelector('.invalidEmail');
+let failedSendingMessage = document.querySelector('.failedSending');
 let successfulSendingMessage = document.querySelector('.successfulSending');
 let desktopNavElements = document.querySelectorAll('.navbar li a');
 let mobileNavElements = document.querySelectorAll('.mobileNavbar li a');
@@ -64,8 +65,8 @@ let skillsPage = document.querySelector('#skills');
 let projectsPage = document.querySelector('#projects');
 let contactPage = document.querySelector('#contact');
 
-const serviceID = "";
-const templateID = "";
+const serviceID = "service_xwsz8b9";
+const templateID = "template_lqz1fsg";
 
 let sendButton = document.querySelector('#sendMessage');
 
@@ -78,34 +79,34 @@ function validateEmail(email) {
 sendButton.addEventListener('click', () => {
     emptyInputMessage.classList.remove('active');
     invalidEmailMessage.classList.remove('active');
+    failedSendingMessage.classList.remove('active');
     successfulSendingMessage.classList.remove('active');
-    let nameInputValue = document.querySelector('#fromName').value;
-    let emailInputValue = document.querySelector('#fromEmail').value;
-    let messageInputValue = document.querySelector('#message').value;
-    console.log(nameInputValue, emailInputValue, messageInputValue);
-    if(!nameInputValue || !emailInputValue || !messageInputValue) {
+    let nameInput = document.querySelector('#fromName');
+    let emailInput = document.querySelector('#fromEmail');
+    let messageInput = document.querySelector('#message');
+    if(!nameInput.value || !emailInput.value || !messageInput.value) {
         emptyInputMessage.classList.add('active');
     }
-    else if(!validateEmail(emailInputValue)) {
+    else if(!validateEmail(emailInput.value)) {
         invalidEmailMessage.classList.add('active');
     }
     else {
         let contactTemplateParams = {
-            fromName: nameInputValue,
-            email: emailInputValue,
-            message: messageInputValue
+            fromName: nameInput.value,
+            email: emailInput.value,
+            message: messageInput.value
         };
         emailjs.send(serviceID, templateID, contactTemplateParams)
-            .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            },
-            function(error) {
-            console.log('FAILED...', error);
+            .then((res) => {
+                nameInput.value = "";
+                emailInput.value = "";
+                messageInput.value = "";
+                successfulSendingMessage.classList.add('active');
+                console.log('Success!', res);
+            }).catch((err) => {
+                failedSendingMessage.classList.add('active');
+            console.log('Failed!', err);
         });
-        nameInputValue = "";
-        emailInputValue = "";
-        messageInputValue = "";
-        successfulSendingMessage.classList.add('active');
     }
     
 });
