@@ -14,8 +14,8 @@ let projects = [
     {
         image: "images/history-bgrounded.png",
         title: "History Quiz",
-        description: "Létrehoztam egy történelmi kvízjátékot, amiben a játékosok különböző témakörökben tehetik próbára a tudásukat. A helyes válaszok után pontokat szerezhetnek, melyekkel kitüntetéseket oldhatnak fel. Eredményeik a local storageban lesznek eltárolva.",
-        technologies: ["Sass", "Vue"],
+        description: "Létrehoztam egy történelmi kvízjátékot, amiben a játékosok különböző témakörökben tehetik próbára a tudásukat. A helyes válaszok után pontokat szerezhetnek, melyekkel kitüntetéseket oldhatnak fel.",
+        technologies: ["ExpressJS", "MongoDB", "Sass", "Vue", "REST API"],
         demo: "https://historyquiz-demo.netlify.app/",
         github: "https://github.com/LunaDephensis/HistoryQuiz"
     },

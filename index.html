@@ -29,8 +29,8 @@
             <div class="mainContent">
                 <div class="textBox">
                     <h2>Zámbó Nikolett</h2>
-                    <h3>junior frontend fejlesztő</h3>
-                    <p>A fejlesztés lehetőséget ad arra, hogy a kreativitásomat használva oldjak meg problémákat, miközben én is fejlődhetek. Nem csak a megjelenítéssel, a különböző funkciók megvalósításával is szeretek foglalkozni.</p>
+                    <h3>junior szoftverfejlesztő</h3>
+                    <p>A fejlesztés lehetőséget ad arra, hogy a kreativitásomat használva oldjak meg problémákat, miközben én is fejlődhetek. A megjelenítéssel és a funkciók megvalósításával egyaránt szeretek foglalkozni.</p>
                 </div>
                 <div class="profile">
                     <div class="imgBox">
@@ -42,53 +42,60 @@
         <section class="skills" id="skills">
             <h2>Használt technológiák</h2>
             <div class="mainContent">
-                <div class="skillCard">
-                    <div class="tech">
-                        <ion-icon name="logo-html5"></ion-icon>
+                <ul class="legends">
+                    <li class="legend"><div class="signColor backend-sign"></div>backend</li>
+                    <li class="legend"><div class="signColor frontend-sign"></div>frontend</li>
+                    <li class="legend"><div class="signColor others-sign"></div>egyéb</li>
+                </ul>
+                <div class="cards">
+                    <div class="skillCard">
+                        <div class="tech backend-tech">
+                            <ion-icon name="logo-nodejs"></ion-icon>
+                        </div>
+                        <h4>NodeJS</h4>
                     </div>
-                    <h4>HTML5</h4>
-                </div>
-                <div class="skillCard">
-                    <div class="tech">
-                        <ion-icon name="logo-css3"></ion-icon>
+                    <div class="skillCard">
+                        <div class="tech backend-tech">
+                            <ion-icon name="server"></ion-icon>
+                        </div>
+                        <h4>SQL</h4>
                     </div>
-                    <h4>CSS3</h4>
-                </div>
-                <div class="skillCard">
-                    <div class="tech">
-                        <ion-icon name="logo-sass"></ion-icon>
+                    <div class="skillCard">
+                        <div class="tech frontend-tech">
+                            <ion-icon name="logo-html5"></ion-icon>
+                        </div>
+                        <h4>HTML5</h4>
                     </div>
-                    <h4>Sass</h4>
-                </div>
-                <div class="skillCard">
-                    <div class="tech">
-                        <ion-icon name="logo-javascript"></ion-icon>
+                    <div class="skillCard">
+                        <div class="tech frontend-tech">
+                            <ion-icon name="logo-sass"></ion-icon>
+                        </div>
+                        <h4>CSS3, Sass</h4>
                     </div>
-                    <h4>Javascript</h4>
-                </div>
-                <div class="skillCard">
-                    <div class="tech">
-                        <ion-icon name="logo-vue"></ion-icon>
+                    <div class="skillCard">
+                        <div class="tech frontend-tech">
+                            <ion-icon name="logo-vue"></ion-icon>
+                        </div>
+                        <h4><span>Vue,</span> <span>Vuex,</span> <span>Pinia</span></h4>
                     </div>
-                    <h4><span>Vue,</span> <span>Vuex,</span> <span>Pinia</span></h4>
-                </div>
-                <div class="skillCard">
-                    <div class="tech">
-                        <ion-icon name="logo-react"></ion-icon>
+                    <div class="skillCard">
+                        <div class="tech frontend-tech">
+                            <ion-icon name="logo-react"></ion-icon>
+                        </div>
+                        <h4>React</h4>
                     </div>
-                    <h4>React</h4>
-                </div>
-                <div class="skillCard">
-                    <div class="tech">
-                        <ion-icon name="logo-npm"></ion-icon>
+                    <div class="skillCard">
+                        <div class="tech others-tech">
+                            <ion-icon name="logo-npm"></ion-icon>
+                        </div>
+                        <h4>npm</h4>
                     </div>
-                    <h4>npm</h4>
-                </div>
-                <div class="skillCard">
-                    <div class="tech">
-                        <ion-icon name="git-branch-outline"></ion-icon>
+                    <div class="skillCard">
+                        <div class="tech others-tech">
+                            <ion-icon name="git-branch-outline"></ion-icon>
+                        </div>
+                        <h4>Git</h4>
                     </div>
-                    <h4>Git</h4>
                 </div>
             </div>
         </section>
@@ -165,7 +172,7 @@
                     <span class="successfulSending">Üzenet sikeresen elküldve!</span>
                     <input id="fromName" type="text" name="fromName" placeholder="Név">
                     <input id="fromEmail" type="email" name="email" placeholder="Email cím">
-                    <textarea id="message" name="message" placeholder="Ide írd az üzeneted" maxlength="5000"></textarea>
+                    <textarea id="message" name="message" placeholder="Az üzeneted helye" maxlength="5000"></textarea>
                     <button id="sendMessage" class="submit">Üzenet elküldése <ion-icon name="send"></ion-icon></button>
                 </div>
                 <div class="contactBox">
@@ -177,7 +184,7 @@
             </div>
             <footer>
                 <span>icons from <a target="_blank" href="https://ionic.io/ionicons"><ion-icon name="logo-ionic"></ion-icon></a></span>
-                <span>2023. Zámbó Nikolett</span>
+                <span>2024. Zámbó Nikolett</span>
                 <span class="up"><a href="#banner"><ion-icon name="arrow-up-circle"></ion-icon></a></span>
             </footer>
         </section>

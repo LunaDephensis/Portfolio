@@ -433,28 +433,31 @@ body {
   flex-direction: column;
   background: #161a1c;
   padding: 6.25em;
+  padding-top: 2.5em;
 }
 @media (max-width: 1115px) {
   .skills {
     padding: 5.6em;
+    padding-top: 2.5em;
   }
 }
 @media (max-width: 991px) {
   .skills {
     padding: 4em;
+    padding-top: 2.5em;
     height: 100%;
   }
 }
 @media (max-width: 789px) {
   .skills {
     padding: 3.5em;
-    padding-top: 4em;
+    padding-top: 3em;
   }
 }
 @media (max-width: 500px) {
   .skills {
     padding: 1.8em;
-    padding-top: 4em;
+    padding-top: 3em;
   }
 }
 .skills h2 {
@@ -499,29 +502,89 @@ body {
 .skills .mainContent {
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+.skills .mainContent .legends {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 789px) {
+  .skills .mainContent .legends {
+    margin-bottom: 1.5em;
+  }
+}
+@media (max-width: 500px) {
+  .skills .mainContent .legends {
+    margin-bottom: 1em;
+  }
+}
+.skills .mainContent .legends .legend {
+  list-style: none;
+  padding: 1em 2em;
+  color: #fff;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 0.8em;
+  font-family: "Rock Salt", cursive;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .skills .mainContent .legends .legend {
+    padding: 0.5em 1em;
+  }
+}
+.skills .mainContent .legends .legend div {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: #469487;
+  margin-right: 1em;
+}
+.skills .mainContent .legends .legend div.backend-sign {
+  background: #469487;
+}
+.skills .mainContent .legends .legend div.frontend-sign {
+  background: #75c86d;
+}
+.skills .mainContent .legends .legend div.others-sign {
+  background: #e3b41b;
+}
+.skills .mainContent .cards {
+  position: relative;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 15em);
   justify-content: center;
   grid-gap: 2.8em;
-  z-index: 10;
 }
 @media (max-width: 1115px) {
-  .skills .mainContent {
+  .skills .mainContent .cards {
     grid-template-columns: repeat(auto-fill, 10em);
   }
 }
 @media (max-width: 991px) {
-  .skills .mainContent {
+  .skills .mainContent .cards {
     grid-template-columns: repeat(auto-fill, 9.7em);
     grid-gap: 1.6em;
   }
 }
 @media (max-width: 789px) {
-  .skills .mainContent {
+  .skills .mainContent .cards {
     grid-gap: 1em;
   }
 }
-.skills .mainContent .skillCard {
+.skills .mainContent .cards .skillCard {
   position: relative;
   width: 9.4em;
   height: 12.5em;
@@ -533,12 +596,12 @@ body {
   border-radius: 0.1em;
 }
 @media (max-width: 789px) {
-  .skills .mainContent .skillCard {
+  .skills .mainContent .cards .skillCard {
     width: 8em;
     height: 10.7em;
   }
 }
-.skills .mainContent .skillCard .tech {
+.skills .mainContent .cards .skillCard .tech {
   position: relative;
   margin-bottom: 1.5em;
   border-radius: 0.1em;
@@ -547,7 +610,16 @@ body {
   height: 4.5em;
   z-index: 10;
 }
-.skills .mainContent .skillCard .tech::before {
+.skills .mainContent .cards .skillCard .tech.backend-tech {
+  background: linear-gradient(10deg, #469487, #79cdac, #79cdac);
+}
+.skills .mainContent .cards .skillCard .tech.frontend-tech {
+  background: linear-gradient(10deg, #43853d, #75c86d, #75c86d);
+}
+.skills .mainContent .cards .skillCard .tech.others-tech {
+  background: linear-gradient(10deg, #91792a, #e3b41b, #e3b41b);
+}
+.skills .mainContent .cards .skillCard .tech::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -558,18 +630,18 @@ body {
   background: rgba(0, 0, 0, 0.1);
   z-index: -1;
 }
-.skills .mainContent .skillCard .tech ion-icon {
+.skills .mainContent .cards .skillCard .tech ion-icon {
   position: absolute;
   top: -0.35em;
   left: -0.2em;
   font-size: 3em;
 }
 @media (max-width: 991px) {
-  .skills .mainContent .skillCard .tech ion-icon {
+  .skills .mainContent .cards .skillCard .tech ion-icon {
     font-size: 2.8em;
   }
 }
-.skills .mainContent .skillCard h4 {
+.skills .mainContent .cards .skillCard h4 {
   font-weight: 500;
   opacity: 0.8;
   font-size: 0.9em;
@@ -579,12 +651,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-.skills .mainContent .skillCard h4 span {
+.skills .mainContent .cards .skillCard h4 span {
   font-family: "Rock Salt", cursive;
   font-size: 0.8em;
   margin-left: 0.5em;
 }
-.skills .mainContent .skillCard h4 span:nth-child(1) {
+.skills .mainContent .cards .skillCard h4 span:nth-child(1) {
   margin-left: 0;
 }
 
