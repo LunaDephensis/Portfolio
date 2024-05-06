@@ -32,7 +32,7 @@ let projects = [
         title: "Space Tourism",
         description: "A dizájn pontos megvalósítására törekedtem a Space Tourism nevű Frontend Mentor challenge teljesítése közben. A challenge részletes leírása megtekinthető <a target='_blank' href='https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3'>ITT</a>.",
         technologies: ["Sass", "Javascript", "Vue"],
-        demo: "https://spacetourism-demo.netlify.app/destination",
+        demo: "https://spacetourism-demo.netlify.app",
         github: "https://github.com/LunaDephensis/SpaceTourism"
     },
     {
