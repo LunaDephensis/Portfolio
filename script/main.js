@@ -8,7 +8,7 @@ let projects = [
         title: "Recipe Book",
         description: "A Recipe Book egy recepteket kezelő full-stack alkalmazás. Bejelentkezés után hozzáférhetünk a saját receptgyűjteményünkhöz, hozzáadhatunk újakat, vagy módosíthatjuk a meglévő receptjeinket.",
         technologies: ["Vue", "ExpressJS", "PostgreSQL", "Sass", "REST API"],
-        demo: "https://recipebook-frontend.fly.dev/",
+        demo: "https://recipebook-demo.netlify.app",
         github: "https://github.com/LunaDephensis/Recipebook"
     },
     {
