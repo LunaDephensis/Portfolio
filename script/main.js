@@ -38,7 +38,7 @@ let projects = [
     {
         image: "images/countries-bgrounded.png",
         title: "Countries",
-        description: "Ezt a Frontend Mentor challenge-et a Tailwind CSS framework és a React együttes felhasználásával valósítottam meg. A challenge részletes leírása megtekinthető <a target='_blank' href='https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca'>ITT</a>.",
+        description: "FONTOS! A Rest Countries API szolgáltatás megszűnt, ezért a demo jelenleg nem működik. Ezt a Frontend Mentor challenge-et a Tailwind CSS framework és a React együttes felhasználásával valósítottam meg. A challenge részletes leírása megtekinthető <a target='_blank' href='https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca'>ITT</a>.",
         technologies: ["Tailwind", "React", "REST API"],
         demo: "https://countries-react-demo.netlify.app/",
         github: "https://github.com/LunaDephensis/countries-react"
