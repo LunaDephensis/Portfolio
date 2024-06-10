@@ -669,7 +669,7 @@ body {
     padding-bottom: 0;
 
     @include desktopMini {
-        padding: 1em 5.6em;
+        padding: 1em 2.5em;
         padding-bottom: 0;
     }
 
@@ -700,35 +700,6 @@ body {
         align-items: center;
         flex-direction: column;
 
-        .projectArrow {
-            display: none;
-
-            @include tabletS {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-
-                &.prev {
-                    top: calc(35% - 0.25em);
-                    left: 0;
-                    z-index: 1000;
-                }
-
-                &.next {
-                    top: calc(35% - 0.25em);
-                    right: 0;
-                    z-index: 1000;
-                }
-
-                ion-icon {
-                    font-size: 4em;
-                    color: $black;
-                }
-            }
-        }
-
         .projectCard {
             position: relative;
             width: 100%;
@@ -738,8 +709,6 @@ body {
             margin-bottom: 2em;
             padding-bottom: 2em;
             border-bottom: 2px solid rgba(70, 148, 135, 0.3);
-
-            
 
             @include tablet {
                 margin-bottom: 1.5em;
@@ -797,6 +766,19 @@ body {
                     align-items: center;
                     width: 100%;
 
+                    .projectArrow {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+        
+                        ion-icon {
+                            font-size: 4em;
+                            color: $black;
+                        }
+                    }
+
                     .dot {
                         height: 1em;
                         width: 1em;
@@ -850,10 +832,12 @@ body {
 
                     @include desktopMini {
                         font-size: 2.2em;
+                        line-height: 1.3em;
                     }
 
                     @include tablet {
                         font-size: 2em;
+                        line-height: normal;
                     }
 
                     @include tabletS {
@@ -1006,7 +990,7 @@ body {
                 margin-bottom: 1em;
                 transition: 0.3s ease-out;
 
-                @include tablet {
+                @include desktopMini {
                     padding: 0.5em 1em;
                 }
 

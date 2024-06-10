@@ -674,7 +674,7 @@ body {
 }
 @media (max-width: 1115px) {
   .projects {
-    padding: 1em 5.6em;
+    padding: 1em 2.5em;
     padding-bottom: 0;
   }
 }
@@ -742,32 +742,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.projects .mainContent .projectArrow {
-  display: none;
-}
-@media (max-width: 789px) {
-  .projects .mainContent .projectArrow {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  .projects .mainContent .projectArrow.prev {
-    top: calc(35% - 0.25em);
-    left: 0;
-    z-index: 1000;
-  }
-  .projects .mainContent .projectArrow.next {
-    top: calc(35% - 0.25em);
-    right: 0;
-    z-index: 1000;
-  }
-  .projects .mainContent .projectArrow ion-icon {
-    font-size: 4em;
-    color: #181c20;
-  }
 }
 .projects .mainContent .projectCard {
   position: relative;
@@ -838,6 +812,17 @@ body {
     align-items: center;
     width: 100%;
   }
+  .projects .mainContent .projectCard .dots .projectArrow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .projects .mainContent .projectCard .dots .projectArrow ion-icon {
+    font-size: 4em;
+    color: #181c20;
+  }
   .projects .mainContent .projectCard .dots .dot {
     height: 1em;
     width: 1em;
@@ -891,11 +876,13 @@ body {
 @media (max-width: 1115px) {
   .projects .mainContent .projectCard .textBox .title {
     font-size: 2.2em;
+    line-height: 1.3em;
   }
 }
 @media (max-width: 991px) {
   .projects .mainContent .projectCard .textBox .title {
     font-size: 2em;
+    line-height: normal;
   }
 }
 @media (max-width: 789px) {
@@ -1046,7 +1033,7 @@ body {
   margin-bottom: 1em;
   transition: 0.3s ease-out;
 }
-@media (max-width: 991px) {
+@media (max-width: 1115px) {
   .projects .mainContent .projectNavbar li {
     padding: 0.5em 1em;
   }
