@@ -127,8 +127,8 @@ body {
             position: relative;
             font-family: 'Rock Salt', cursive;
             color: $mediumDark;
+            cursor: default;
             font-size: 1em;
-            cursor: pointer;
             z-index: 1000;
 
             @include mobile {

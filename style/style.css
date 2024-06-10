@@ -127,8 +127,8 @@ body {
   position: relative;
   font-family: "Rock Salt", cursive;
   color: #2c6e7a;
+  cursor: default;
   font-size: 1em;
-  cursor: pointer;
   z-index: 1000;
 }
 @media (max-width: 500px) {
